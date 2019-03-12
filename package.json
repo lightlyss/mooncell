@@ -1,0 +1,28 @@
+{
+  "name": "mooncell",
+  "version": "0.0.1",
+  "description": "A basic lookup system for servants of Fate/Grand Order",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "resetdb": "cd json && node convert.js db.txt db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lightlyss/mooncell.git"
+  },
+  "keywords": [
+    "fate-grand-order"
+  ],
+  "author": "lightlyss",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lightlyss/mooncell/issues"
+  },
+  "homepage": "https://github.com/lightlyss/mooncell#readme",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "dotenv": "^6.2.0",
+    "lowdb": "^1.0.0"
+  }
+}
