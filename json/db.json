@@ -1,7 +1,7 @@
 {
   "servants": [
     {
-      "id": "1",
+      "id": "1.0",
       "name": "Mash Kyrielight",
       "className": "Shielder",
       "rarity": "3",
@@ -8284,7 +8284,8 @@
         "Proof of Hero x10, Void's Dust x10",
         "Octuplet Crystals x10, Eternal Gear x10",
         "Phoenix Feather x10, Claw of Chaos x10",
-        "Tearstone of Blood x10, Heart of the Foreign God x10"
+        "Tearstone of Blood x10, Heart of the Foreign God x10",
+        "Mystic Spinal Fluid x10, Deadly Poisonous Needle x10, Black Beast Grease x5, Heart of the Foreign God x5"
       ],
       "upgrades": [
         "Dragon Fang x10",
@@ -8361,7 +8362,8 @@
         "Proof of Hero x10, Evil Bone x10",
         "Void's Dust x10, Black Beast Grease x10",
         "Eternal Gear x10, Tearstone of Blood x10",
-        "Spirit Root x10, Dragon's Reverse Scale x10"
+        "Spirit Root x10, Dragon's Reverse Scale x10",
+        "Mystic Spinal Fluid x10, Deadly Poisonous Needle x10, Black Beast Grease x5, Heart of the Foreign God x5"
       ],
       "upgrades": [
         "Proof of Hero x10",
@@ -10616,7 +10618,8 @@
         "Caster Piece x5",
         "Caster Piece x12, Seed of Yggdrasil x9",
         "Caster Monument x5, Forbidden Page x10, Phoenix Feather x4",
-        "Caster Monument x12, Phoenix Feather x8, Scarab of Wisdom x5"
+        "Caster Monument x12, Phoenix Feather x8, Scarab of Wisdom x5",
+        "Void's Dust x10, Homunculus Baby x5, Lamp of Evil-Sealing x5, Heart of the Foreign God x5"
       ],
       "upgrades": [
         "Gem of Caster x5",
@@ -12104,7 +12107,7 @@
       ],
       "actives": [
         "The Freeshooter EX",
-        "End of the Spider's Web A++",
+        "End of the Spider's Web A++, End of the Spider's Web A+++",
         "Evil Charisma A"
       ],
       "passives": [
@@ -12117,7 +12120,8 @@
         "Archer Piece x5",
         "Archer Piece x12, Forbidden Page x8",
         "Archer Monument x5, Deadly Poisonous Needle x24, Claw of Chaos x3",
-        "Archer Monument x12, Claw of Chaos x6, Scarab of Wisdom x5"
+        "Archer Monument x12, Claw of Chaos x6, Scarab of Wisdom x5",
+        "Tearstone of Blood x5, Iron Stake of Evening Tears x10, Eternal Frost x5, Chichi Divine Wine x5"
       ],
       "upgrades": [
         "Gem of Archer x5",
@@ -12179,9 +12183,9 @@
         "Weak to Enuma Elish"
       ],
       "actives": [
-        "Bulletproof Reinforcement A",
+        "Bulletproof A",
         "Projection C",
-        "Mocked Conviction A"
+        "Icy Sneer A"
       ],
       "passives": [
         "Magic Resistance D",
@@ -18414,6 +18418,88 @@
       "art": "Honjou Raita",
       "voice": "Kayano Ai",
       "valId": "987"
+    },
+    {
+      "id": "238",
+      "name": "Kingprotea",
+      "className": "Alter Ego",
+      "rarity": "5",
+      "growth": "-",
+      "lv": "90",
+      "hps": [
+        "1956",
+        "13338",
+        "14612"
+      ],
+      "atks": [
+        "1983",
+        "12835",
+        "14050"
+      ],
+      "npGains": [
+        "0.56",
+        "4"
+      ],
+      "hitCounts": [
+        "3",
+        "3",
+        "1",
+        "6",
+        "5"
+      ],
+      "crits": [
+        "100",
+        "10.2"
+      ],
+      "death": "45",
+      "attr": "Earth",
+      "traits": [
+        "Female",
+        "Servant",
+        "Humanoid",
+        "Divine",
+        "Weak to Enuma Elish",
+        "Sky or Earth Servant",
+        "Massive"
+      ],
+      "actives": [
+        "Huge Scale C",
+        "Infantile Regression C",
+        "Monstrous Strength EX"
+      ],
+      "passives": [
+        "Madness Enhancement A+",
+        "Independent Action A+",
+        "Territory Creation EX",
+        "Core of the Goddess A",
+        "High Servant EX"
+      ],
+      "np": "Airavata King Size",
+      "deck": "QAABB(B)",
+      "ascs": [
+        "Saber Piece x5, Rider Piece x5",
+        "Saber Piece x12, Rider Piece x12",
+        "Saber Monument x5, Rider Monument x5",
+        "Saber Monument x12, Rider Monument x12"
+      ],
+      "upgrades": [
+        "Gem of Saber x5, Gem of Rider x5",
+        "Gem of Saber x12, Gem of Rider x12",
+        "Magic Gem of Saber x5, Magic Gem of Rider x5",
+        "Magic Gem of Saber x5, Magic Gem of Rider x5",
+        "Secret Gem of Saber x5, Secret Gem of RIder x5",
+        "Secret Gem of Saber x12, Secret Gem of Rider x12",
+        "Ring of Giant x5, Dawn's Light Core x5",
+        "Dragon's Reverse Scale x9, Spirit Root x9",
+        "Crystalized Lore x1"
+      ],
+      "avail": "Limited",
+      "cost": "16",
+      "align": "Lawful Good",
+      "bondId": "989",
+      "art": "Wada Arco",
+      "voice": "Han Megumi",
+      "valId": null
     }
   ]
 }

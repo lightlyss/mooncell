@@ -7,7 +7,7 @@ class Database {
     this.db = low(this.adapter);
   }
 
-  queryByName(terms) {
+  query(terms) {
     return this.db
       .get('servants')
       .find(svt => {
@@ -21,6 +21,12 @@ class Database {
         return true;
       })
       .value();
+  }
+
+  get4thAscFilename(svtId) {
+    let imgId = svtId.replace('.', 'p');
+    while (imgId.split('p')[0].length < 3) imgId = '0' + imgId;
+    return `${imgId}4.png`;
   }
 }
 
