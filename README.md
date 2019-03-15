@@ -6,9 +6,14 @@
 ## Description
 A utility for basic lookup of Fate/Grand Order servants, currently only supporting
 interaction via Discord bot. Set your access `TOKEN` inside a `.env` file.
-Queries are accepted via any message that mentions the bot user. Include `exit` as
-a query to disconnect the client.
+Queries are accepted via any message that mentions the bot user.
 ```bash
 npm install
 npm start
+```
+
+## Testing
+Testing is black-box integration only and done using Jest.
+```bash
+npm test
 ```

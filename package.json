@@ -2,9 +2,10 @@
   "name": "mooncell",
   "version": "0.0.2",
   "description": "A basic lookup system for servants of Fate/Grand Order",
-  "main": "index.js",
+  "main": "discord.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node discord.js",
+    "test": "jest --coverage",
     "resetdb": "cd json && node convert.js db.txt db.json"
   },
   "repository": {
@@ -24,5 +25,8 @@
     "discord.js": "^11.4.2",
     "dotenv": "^6.2.0",
     "lowdb": "^1.0.0"
+  },
+  "devDependencies": {
+    "jest": "^24.5.0"
   }
 }

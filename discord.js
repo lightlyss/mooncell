@@ -22,16 +22,16 @@ client.on('ready', () => {
     },
     status: 'online'
   });
-  console.log('OK');
 });
 
 client.on('message', msg => {
   if (!msg.isMentioned(client.user)) return;
   let query = msg.content.split(/ +/).filter(q => !q.startsWith('<@'));
-  if (query.find(q => q.toLowerCase() == 'exit')) return client.destroy();
   let svt = db.query(query);
   if (!svt || !svt.id) return msg.react('🤔');
   msg.reply({embed: embed(svt)});
 });
 
 client.login(process.env.TOKEN);
+
+module.exports = client;
