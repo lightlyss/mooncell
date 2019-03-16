@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node discord.js",
     "test": "jest --coverage",
+    "test-ci": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "resetdb": "cd json && node convert.js db.txt db.json"
   },
   "repository": {
@@ -27,6 +28,7 @@
     "lowdb": "^1.0.0"
   },
   "devDependencies": {
+    "coveralls": "^3.0.3",
     "jest": "^24.5.0"
   }
 }
