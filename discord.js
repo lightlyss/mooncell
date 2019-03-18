@@ -1,16 +1,16 @@
 require('dotenv').config();
 const Discord = require('discord.js');
-const Database = require('./js/database.js');
-const ProbEngine = require('./js/probability_engine.js');
+const Seraph = require('./js/seraph.js');
+const Fate = require('./js/fate.js');
 const client = new Discord.Client();
-const db = new Database('json/db.json');
-const pEngine = new ProbEngine(db);
+const seraph = new Seraph('json/akasha.json');
+const fate = new Fate(seraph);
 
 let embed = svt => new Discord.RichEmbed()
-  .attachFile(`img/servants/${db.get4thAscFilename(svt.id)}`)
+  .attachFile(`img/servants/${seraph.get4thAscFilename(svt.id)}`)
   .setAuthor(`${svt.name}`)
   .setDescription(`*${svt.avail} ${svt.rarity}:sparkles: ${svt.className}*`)
-  .setImage(`attachment://${db.get4thAscFilename(svt.id)}`)
+  .setImage(`attachment://${seraph.get4thAscFilename(svt.id)}`)
   .addField('Cards', `${svt.deck} **|** ${svt.np}`)
   .addField('Skills', svt.actives.join('\n'))
   .setFooter(`LV${svt.lv} | ${svt.hps[1]}HP | ${svt.atks[1]}ATK`)
@@ -28,10 +28,10 @@ client.on('ready', () => {
 
 client.on('message', msg => {
   if (!msg.isMentioned(client.user)) return;
-  let query = msg.content.split(/ +/).filter(q => !q.startsWith('<@'));
-  let svt = !query.length ? pEngine.roll() : db.query(query);
+  let query = msg.content.trim().split(/ +/).filter(q => !q.startsWith('<@'));
+  let svt = !query.length ? fate.summon() : seraph.query(query);
   if (!svt || !svt.id) return msg.react('🤔');
-  msg.reply({embed: embed(svt)});
+  return msg.reply({embed: embed(svt)});
 });
 
 client.login(process.env.TOKEN);

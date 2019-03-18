@@ -1,12 +1,12 @@
 const random = require('math-random');
 
-class ProbabilityEngine {
+class Fate {
   constructor(db) {
     this.db = db;
     this.rates = [0.0001, 0.27995, 0.27995, 0.40, 0.03, 0.01];
   }
 
-  roll() {
+  summon() {
     let rn = random();
     let pivot = 0;
     let pool = [];
@@ -21,4 +21,4 @@ class ProbabilityEngine {
   }
 }
 
-module.exports = ProbabilityEngine;
+module.exports = Fate;

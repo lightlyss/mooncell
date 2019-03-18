@@ -1,13 +1,13 @@
 {
   "name": "mooncell",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A basic lookup system for servants of Fate/Grand Order",
   "main": "discord.js",
   "scripts": {
     "start": "node discord.js",
     "test": "jest --coverage",
     "test-ci": "jest --coverage --coverageReporters=text-lcov | coveralls",
-    "resetdb": "cd json && node convert.js db.txt db.json"
+    "resetdb": "cd json && node automaton.js akasha.db akasha.json"
   },
   "repository": {
     "type": "git",

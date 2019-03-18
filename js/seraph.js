@@ -1,7 +1,7 @@
 const low = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
 
-class Database {
+class Seraph {
   constructor(path) {
     this.adapter = new FileSync(path);
     this.db = low(this.adapter);
@@ -37,4 +37,4 @@ class Database {
   }
 }
 
-module.exports = Database;
+module.exports = Seraph;
