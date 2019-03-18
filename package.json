@@ -25,7 +25,8 @@
   "dependencies": {
     "discord.js": "^11.4.2",
     "dotenv": "^6.2.0",
-    "lowdb": "^1.0.0"
+    "lowdb": "^1.0.0",
+    "math-random": "^1.0.4"
   },
   "devDependencies": {
     "coveralls": "^3.0.3",

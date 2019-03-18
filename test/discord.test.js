@@ -85,9 +85,9 @@ test('reacts when not found', () => {
   expect(msg.react.mock.calls[0][0]).toBe('🤔');
 });
 
-test('accepts empty queries', () => {
+test('accepts disordered queries', () => {
   let msg = {
-    content: '<@30422>',
+    content: '   kyrie      <@30422>   mash    ',
     isMentioned: user => user.username == 'Moon Cell',
     react: jest.fn(),
     reply: jest.fn()

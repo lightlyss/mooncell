@@ -1,8 +1,10 @@
 require('dotenv').config();
 const Discord = require('discord.js');
-const Database = require('./js/db.js');
+const Database = require('./js/database.js');
+const ProbEngine = require('./js/probability_engine.js');
 const client = new Discord.Client();
 const db = new Database('json/db.json');
+const pEngine = new ProbEngine(db);
 
 let embed = svt => new Discord.RichEmbed()
   .attachFile(`img/servants/${db.get4thAscFilename(svt.id)}`)
@@ -27,7 +29,7 @@ client.on('ready', () => {
 client.on('message', msg => {
   if (!msg.isMentioned(client.user)) return;
   let query = msg.content.split(/ +/).filter(q => !q.startsWith('<@'));
-  let svt = db.query(query);
+  let svt = !query.length ? pEngine.roll() : db.query(query);
   if (!svt || !svt.id) return msg.react('🤔');
   msg.reply({embed: embed(svt)});
 });

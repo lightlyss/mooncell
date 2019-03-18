@@ -23,6 +23,13 @@ class Database {
       .value();
   }
 
+  findByRarity(rarity) {
+    return this.db
+      .get('servants')
+      .filter({rarity: rarity})
+      .value();
+  }
+
   get4thAscFilename(svtId) {
     let imgId = svtId.replace('.', 'p');
     while (imgId.split('p')[0].length < 3) imgId = '0' + imgId;
