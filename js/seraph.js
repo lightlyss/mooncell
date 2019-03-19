@@ -1,7 +1,7 @@
 const low = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
 
-class Database {
+class Seraph {
   constructor(path) {
     this.adapter = new FileSync(path);
     this.db = low(this.adapter);
@@ -23,6 +23,13 @@ class Database {
       .value();
   }
 
+  findByRarity(rarity) {
+    return this.db
+      .get('servants')
+      .filter({rarity: rarity})
+      .value();
+  }
+
   get4thAscFilename(svtId) {
     let imgId = svtId.replace('.', 'p');
     while (imgId.split('p')[0].length < 3) imgId = '0' + imgId;
@@ -30,4 +37,4 @@ class Database {
   }
 }
 
-module.exports = Database;
+module.exports = Seraph;

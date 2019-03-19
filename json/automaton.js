@@ -12,13 +12,11 @@ const FIELDS = [
 const ENCODING = 'utf8';
 const args = process.argv.slice(2);
 
-// Validation
 if (args.length != 2 || args[0] == args[1]) {
   console.error('Arguments: src_file dst_file');
   process.exit(1);
 }
 
-// Construction
 fs.readFile(args[0], ENCODING, (err, data) => {
   if (err) return console.error(err);
   let lines = data.split('\n');
