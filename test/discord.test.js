@@ -88,169 +88,61 @@ test('reacts when not found', () => {
 });
 
 // Query cases------------------------------------------------------------------
-test('accepts disordered queries', done => {
-  let msg = {
-    content: '   kyrie      <@30422>   mash    ',
-    isMentioned: user => user.username == 'Moon Cell',
-    react: jest.fn(),
-    reply: o => {
-      expect(msg.react.mock.calls.length).toBe(0);
-      expect(fs.statSync(o.embed.data.file).isFile()).toBe(true);
-      expect(o.embed.data.author).toBe('Mash Kyrielight');
-      expect(o.embed.data.color).toBe('#442d39');
-      done();
-    }
-  };
-  sendMsg(msg);
-});
-
-test('accepts partial name queries', done => {
-  let msg = {
-    content: '<@30422> jeanne alter',
-    isMentioned: user => user.username == 'Moon Cell',
-    react: jest.fn(),
-    reply: o => {
-      expect(msg.react.mock.calls.length).toBe(0);
-      expect(fs.statSync(o.embed.data.file).isFile()).toBe(true);
-      expect(o.embed.data.author).toBe('Jeanne d\'Arc (Alter) (Avenger)');
-      expect(o.embed.data.color).toBe('#091f3f');
-      done();
-    }
-  };
-  sendMsg(msg);
-});
-
-test('accepts class plus name queries', done => {
-  let msg = {
-    content: '<@30422> lancer jeanne',
-    isMentioned: user => user.username == 'Moon Cell',
-    react: jest.fn(),
-    reply: o => {
-      expect(msg.react.mock.calls.length).toBe(0);
-      expect(fs.statSync(o.embed.data.file).isFile()).toBe(true);
-      expect(o.embed.data.author).toBe('Jeanne d\'Arc Alter Santa Lily');
-      expect(o.embed.data.color).toBe('#eab6ba');
-      done();
-    }
-  };
-  sendMsg(msg);
-});
-
-test('accepts class queries', done => {
-  let msg = {
-    content: '<@30422> foreigner',
-    isMentioned: user => user.username == 'Moon Cell',
-    react: jest.fn(),
-    reply: o => {
-      expect(msg.react.mock.calls.length).toBe(0);
-      expect(fs.statSync(o.embed.data.file).isFile()).toBe(true);
-      expect(o.embed.data.author).toBe('Abigail Williams');
-      expect(o.embed.data.color).toBe('#493b5f');
-      done();
-    }
-  };
-  sendMsg(msg);
-});
+const qc = [
+  {n: 'performs disordered queries', i: 'kyrie  <@30422>   mash', o: 'Mash Kyrielight', c: '#442d39'},
+  {n: 'performs partial name queries', i: ' <@30422> jeanne alter ', o: 'Jeanne d\'Arc (Alter) (Avenger)', c: '#091f3f'},
+  {n: 'performs class plus name queries', i: '  <@30422> lancer jeanne', o: 'Jeanne d\'Arc Alter Santa Lily', c: '#eab6ba'},
+  {n: 'performs class queries', i: '<@30422> foreigner  ', o: 'Abigail Williams', c: '#493b5f'},
+  {n: 'performs prefix queries', i: '<@0> nobu', o: 'Oda Nobunaga (Archer)', c: '#f8f5f1'},
+  {n: 'performs autocorrect on queries', i: '<@0> atria', o: 'Altria Pendragon', c: '#4c5988'},
+  {n: 'performs best match queries', i: '<@0> bb', o: 'BB', c: '#8f4b2f'},
+  {n: 'performs suffix queries', i: '<@0> hime', o: 'Osakabe-Hime', c: '#eecab5'},
+  {n: 'performs modifier queries', i: '<@0> saber lily', o: 'Altria Pendragon (Lily)', c: '#e6e3d8'},
+  {n: 'performs autocorrect on modifier queries', i: '<@0> jalter lily', o: 'Jeanne d\'Arc Alter Santa Lily', c: '#eab6ba'}
+];
+for (let c of qc) {
+  test(c.n, done => {
+    let msg = {
+      content: c.i,
+      isMentioned: user => user.username == 'Moon Cell',
+      react: jest.fn(),
+      reply: o => {
+        expect(msg.react.mock.calls.length).toBe(0);
+        expect(fs.statSync(o.embed.data.file).isFile()).toBe(true);
+        expect(o.embed.data.author).toBe(c.o);
+        expect(o.embed.data.color).toBe(c.c);
+        done();
+      }
+    };
+    sendMsg(msg);
+  });
+}
 
 // Summon cases-----------------------------------------------------------------
-test('summons 0* servants', done => {
-  jest.mock('math-random', () => () => 0.00007);
-  let msg = {
-    content: '  <@57033925475>     ',
-    isMentioned: user => user.username == 'Moon Cell',
-    react: jest.fn(),
-    reply: o => {
-      expect(msg.react.mock.calls.length).toBe(0);
-      expect(fs.statSync(o.embed.data.file).isFile()).toBe(true);
-      expect(o.embed.data.description).toMatch('0:');
-      expect(o.embed.data.color).toMatch(/#[0-9a-f]{6}/);
-      done();
-    }
-  };
-  sendMsg(msg);
-});
-
-test('summons 1* servants', done => {
-  jest.mock('math-random', () => () => 0.22);
-  let msg = {
-    content: '<@57033925475> ',
-    isMentioned: user => user.username == 'Moon Cell',
-    react: jest.fn(),
-    reply: o => {
-      expect(msg.react.mock.calls.length).toBe(0);
-      expect(fs.statSync(o.embed.data.file).isFile()).toBe(true);
-      expect(o.embed.data.description).toMatch('1:');
-      expect(o.embed.data.color).toMatch(/#[0-9a-f]{6}/);
-      done();
-    }
-  };
-  sendMsg(msg);
-});
-
-test('summons 2* servants', done => {
-  jest.mock('math-random', () => () => 0.5);
-  let msg = {
-    content: '<@000000>',
-    isMentioned: user => user.username == 'Moon Cell',
-    react: jest.fn(),
-    reply: o => {
-      expect(msg.react.mock.calls.length).toBe(0);
-      expect(fs.statSync(o.embed.data.file).isFile()).toBe(true);
-      expect(o.embed.data.description).toMatch('2:');
-      expect(o.embed.data.color).toMatch(/#[0-9a-f]{6}/);
-      done();
-    }
-  };
-  sendMsg(msg);
-});
-
-test('summons 3* servants', done => {
-  jest.mock('math-random', () => () => 0.75);
-  let msg = {
-    content: '<@000000>',
-    isMentioned: user => user.username == 'Moon Cell',
-    react: jest.fn(),
-    reply: o => {
-      expect(msg.react.mock.calls.length).toBe(0);
-      expect(fs.statSync(o.embed.data.file).isFile()).toBe(true);
-      expect(o.embed.data.description).toMatch('3:');
-      expect(o.embed.data.color).toMatch(/#[0-9a-f]{6}/);
-      done();
-    }
-  };
-  sendMsg(msg);
-});
-
-test('summons 4* servants', done => {
-  jest.mock('math-random', () => () => 0.98);
-  let msg = {
-    content: '    <@0xDEAD>',
-    isMentioned: user => user.username == 'Moon Cell',
-    react: jest.fn(),
-    reply: o => {
-      expect(msg.react.mock.calls.length).toBe(0);
-      expect(fs.statSync(o.embed.data.file).isFile()).toBe(true);
-      expect(o.embed.data.description).toMatch('4:');
-      expect(o.embed.data.color).toMatch(/#[0-9a-f]{6}/);
-      done();
-    }
-  };
-  sendMsg(msg);
-});
-
-test('summons 5* servants', done => {
-  jest.mock('math-random', () => () => 0.999);
-  let msg = {
-    content: '<@>',
-    isMentioned: user => user.username == 'Moon Cell',
-    react: jest.fn(),
-    reply: o => {
-      expect(msg.react.mock.calls.length).toBe(0);
-      expect(fs.statSync(o.embed.data.file).isFile()).toBe(true);
-      expect(o.embed.data.description).toMatch('5:');
-      expect(o.embed.data.color).toMatch(/#[0-9a-f]{6}/);
-      done();
-    }
-  };
-  sendMsg(msg);
-});
+const sc = [
+  {rng: 0.00007, i: '  <@57033925475>  ', r: '0'},
+  {rng: 0.22, i: '<@57033925475> ', r: '1'},
+  {rng: 0.5, i: '  <@000000>', r: '2'},
+  {rng: 0.75, i: '<@000000>', r: '3'},
+  {rng: 0.98, i: '  <@0xDEAD>', r: '4'},
+  {rng: 0.999, i: '<@>', r: '5'}
+];
+for (let c of sc) {
+  let mock_rng = c.rng;
+  test(`summons ${c.r}* servants`, done => {
+    jest.mock('math-random', () => () => mock_rng);
+    let msg = {
+      content: c.i,
+      isMentioned: user => user.username == 'Moon Cell',
+      react: jest.fn(),
+      reply: o => {
+        expect(msg.react.mock.calls.length).toBe(0);
+        expect(fs.statSync(o.embed.data.file).isFile()).toBe(true);
+        expect(o.embed.data.description).toMatch(`${c.r}:`);
+        expect(o.embed.data.color).toMatch(/#[0-9a-f]{6}/);
+        done();
+      }
+    };
+    sendMsg(msg);
+  });
+}

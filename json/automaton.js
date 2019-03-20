@@ -25,16 +25,16 @@ fs.readFile(args[0], ENCODING, (err, data) => {
   let lines = data.split('\n');
   let db = {servants: []};
 
-  for (line of lines) {
+  for (let line of lines) {
     let fields = line.split('\\');
     let servant = {};
 
     for (let i = 0; i < FIELDS.length; i++) {
       if (!fields[i]) servant[FIELDS[i]] = null;
-      else if (!FIELDS[i].endsWith('s')) servant[FIELDS[i]] = fields[i];
-      else if (fields[i].includes(';')) servant[FIELDS[i]] = fields[i].split(/ *; */);
-      else if (fields[i].includes(',')) servant[FIELDS[i]] = fields[i].split(/ *, */);
-      else servant[FIELDS[i]] = fields[i];
+      else if (!FIELDS[i].endsWith('s')) servant[FIELDS[i]] = fields[i].trim();
+      else if (fields[i].includes(';')) servant[FIELDS[i]] = fields[i].trim().split(/ *; */);
+      else if (fields[i].includes(',')) servant[FIELDS[i]] = fields[i].trim().split(/ *, */);
+      else servant[FIELDS[i]] = fields[i].trim();
     }
 
     if (!servant.id) continue;
