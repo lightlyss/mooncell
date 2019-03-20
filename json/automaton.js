@@ -1,3 +1,6 @@
+/**
+* Akashic Records (False): Automaton
+*/
 const fs = require('fs');
 const FIELDS = [
   'id', 'name', 'className', 'rarity',

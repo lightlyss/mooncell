@@ -1,6 +1,6 @@
 {
   "name": "mooncell",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A basic lookup system for servants of Fate/Grand Order",
   "main": "discord.js",
   "scripts": {
@@ -23,13 +23,14 @@
   },
   "homepage": "https://github.com/lightlyss/mooncell#readme",
   "dependencies": {
-    "discord.js": "^11.4.2",
-    "dotenv": "^6.2.0",
-    "lowdb": "^1.0.0",
-    "math-random": "^1.0.4"
+    "discord.js": "11.4.2",
+    "dotenv": "6.2.0",
+    "get-image-colors": "2.0.0",
+    "lowdb": "1.0.0",
+    "math-random": "1.0.4"
   },
   "devDependencies": {
-    "coveralls": "^3.0.3",
-    "jest": "^24.5.0"
+    "coveralls": "3.0.3",
+    "jest": "24.5.0"
   }
 }

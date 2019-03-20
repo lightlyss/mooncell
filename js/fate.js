@@ -1,8 +1,11 @@
 const random = require('math-random');
 
+/**
+* Heroic Spirit Summoning System: FATE
+*/
 class Fate {
-  constructor(db) {
-    this.db = db;
+  constructor(seraph) {
+    this.seraph = seraph;
     this.rates = [0.0001, 0.27995, 0.27995, 0.40, 0.03, 0.01];
   }
 
@@ -13,7 +16,7 @@ class Fate {
     for (let r = 0; r < this.rates.length; r++) {
       pivot += this.rates[r];
       if (rn < pivot) {
-        pool = this.db.findByRarity(r.toString());
+        pool = this.seraph.findByRarity(r.toString());
         break;
       }
     }
