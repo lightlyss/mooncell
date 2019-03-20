@@ -1,6 +1,9 @@
 const low = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
 
+/**
+* Serial Phantasm: SE.RA.PH
+*/
 class Seraph {
   constructor(path) {
     this.adapter = new FileSync(path);
@@ -28,12 +31,6 @@ class Seraph {
       .get('servants')
       .filter({rarity: rarity})
       .value();
-  }
-
-  get4thAscFilename(svtId) {
-    let imgId = svtId.replace('.', 'p');
-    while (imgId.split('p')[0].length < 3) imgId = '0' + imgId;
-    return `${imgId}4.png`;
   }
 }
 

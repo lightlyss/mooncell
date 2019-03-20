@@ -6,20 +6,20 @@
 > A massive collection of photonic crystals within the Moon that comprises a giant supercomputer.
 
 ## Description
-A utility for basic lookup of Fate/Grand Order servants, supporting
-interaction via Discord bot. Set an access `TOKEN` inside a `.env` file.
+A utility for basic lookup of Fate/Grand Order servants, supporting interaction via Discord bot.
 Queries are accepted via any message that mentions the bot user.
-Empty queries will be treated as a random summon request, mostly following
-standard rates of Saint Quartz banners.
+Empty queries will be treated as random single summon requests, mostly following
+the standard rates of Saint Quartz banners.
 
 ## Setup
+Set an access `TOKEN` inside a `.env` file.
 ```bash
 npm install
 npm start
 ```
 
-## Testing
-Testing is black-box integration only and done using Jest.
+## Tests
+Black-box integration tests are provided using Jest.
 ```bash
 npm test
 ```
