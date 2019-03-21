@@ -27,7 +27,8 @@
     "dotenv": "6.2.0",
     "get-image-colors": "2.0.0",
     "lowdb": "1.0.0",
-    "math-random": "1.0.4"
+    "math-random": "1.0.4",
+    "minisearch": "1.2.0"
   },
   "devDependencies": {
     "coveralls": "3.0.3",
