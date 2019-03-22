@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mooncell" ng-controller="mooncellCtrl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>{{title}}</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/grayscale.min.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+  <section id="search" class="contact-section bg-black">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10 col-lg-8 mx-auto text-center">
+          <form class="form-inline d-flex">
+            <input type="text" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" ng-model="query">
+            <button type="submit" class="btn btn-primary mx-auto" ng-click="search(query)">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="main" class="contact-section bg-black">
+    <div class="container">
+      <h2 class="text-white mb-5 text-center">{{svt.name}}</h2>
+      <div class="row justify-content-center mb-4 mb-lg-5">
+        <div class="col-xl-8 col-lg-7 text-center">
+          <img class="img-fluid rounded mb-3 mb-lg-0 text-center" src="{{imgPath}}" alt="">
+        </div>
+      </div>
+
+      <div class="row justify-content-center mb-4 mb-lg-5">
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-envelope text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Overview</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">
+                <ul class="list-unstyled">
+                  <li>LV{{svt.lv}} {{svt.rarity}}★ {{svt.className}}</li>
+                  <li>ATK: {{svt.atks[1]}} | HP: {{svt.hps[1]}}</li>
+                  <li>{{svt.deck}} | {{svt.np}}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-envelope text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Passives</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">
+                <ul class="list-unstyled">
+                  <li ng-repeat="skill in svt.passives">
+                    {{skill}}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-envelope text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Skills</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">
+                <ul class="list-unstyled">
+                  <li ng-repeat="skill in svt.actives">
+                    {{skill}}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-black small text-center text-white-50">
+      <div class="container">
+        {{title}}
+      </div>
+    </footer>
+  </section>
+
+  <script src="js/seraph.js"></script>
+  <script src="js/sheba.js"></script>
+  <script src="js/vendor/jquery.min.js"></script>
+  <script src="js/vendor/bootstrap.bundle.min.js"></script>
+  <script src="js/vendor/angular.min.js"></script>
+  <script src="js/vendor/angular-resource.min.js"></script>
+  <script src="js/vendor/angular-route.min.js"></script>
+  <script src="js/mooncell.js"></script>
+</body>
+</html>

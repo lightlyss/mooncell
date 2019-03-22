@@ -1,14 +1,12 @@
 const low = require('lowdb');
-const FileSync = require('lowdb/adapters/FileSync');
 const Engine = require('minisearch');
 
 /**
 * Serial Phantasm: SE.RA.PH
 */
 class Seraph {
-  constructor(path) {
-    this.adapter = new FileSync(path);
-    this.db = low(this.adapter);
+  constructor(adapter) {
+    this.db = low(adapter);
     this.engine = new Engine({
       fields: ['name', 'className'],
       searchOptions: {
