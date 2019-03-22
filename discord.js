@@ -1,15 +1,17 @@
 require('dotenv').config();
 
 const Discord = require('discord.js');
-const Seraph = require('./js/seraph.js');
-const Fate = require('./js/fate.js');
-const Sheba = require('./js/sheba.js');
+const FileSync = require('lowdb/adapters/FileSync');
+const Seraph = require('./services/seraph.js');
+const Fate = require('./services/fate.js');
+const Sheba = require('./services/sheba.js');
 
 const client = new Discord.Client();
-const seraph = new Seraph('json/akasha.json');
+const seraph = new Seraph(new FileSync('docs/json/akasha.json'));
 const fate = new Fate(seraph);
-const sheba = new Sheba('img/');
+const sheba = new Sheba('docs/img/');
 
+// Helpers
 let embed = svt => new Discord.RichEmbed()
   .attachFile(sheba.getImgPath(svt.id))
   .setAuthor(svt.name)
@@ -19,6 +21,7 @@ let embed = svt => new Discord.RichEmbed()
   .addField('Skills', svt.actives.join('\n'))
   .setFooter(`LV${svt.lv} | ${svt.hps[1]}HP | ${svt.atks[1]}ATK`);
 
+// Configure Discord
 client.on('ready', () => client.user.setPresence({
   game: {
     type: 'LISTENING',
