@@ -1,25 +1,33 @@
-let app = angular.module('mooncell', []);
+const app = angular.module('mooncell', []);
 
-app.controller('mooncellCtrl', async ($scope, $http, $window) => {
-  class Adapter {
-    constructor(src) { this.source = src; }
-    read() { return this.source; }
-    write() {}
+app.service('automaton', class {
+  constructor($http) {
+    this.http = $http;
+    this.Adapter = class {
+      constructor(src) { this.source = src; }
+      read() { return this.source; }
+      write() {}
+    };
   }
-  let adapter = null;
-  await $http.get('json/akasha.json')
-    .then(res => adapter = new Adapter(res.data));
 
-  let seraph = new $window.Seraph(adapter);
-  let sheba = new $window.Sheba('img/');
-  $scope.title = 'Moon Cell';
+  async getAdapter() {
+    return this.http
+      .get('json/akasha.json')
+      .then(res => new this.Adapter(res.data));
+  }
+});
+
+app.controller('mooncellCtrl', async ($scope, $window, automaton) => {
+  const seraph = new $window.Seraph(await automaton.getAdapter());
+  const sheba = new $window.Sheba('img/');
   $scope.search = query => {
     if (!query) return;
-    let svt = seraph.query(query.trim().split(/ +/));
+    const svt = seraph.query(query.trim().split(/ +/));
     if (!svt || !svt.id) return;
+    $scope.imgPath = sheba.getImgPath(svt.id);
     $scope.svt = svt;
-    $scope.imgPath = sheba.getImgPath($scope.svt.id);
   };
+
   $scope.search('BB');
   return $scope.$digest();
 });

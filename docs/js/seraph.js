@@ -18985,13 +18985,20 @@ class Seraph {
   }
 
   query(terms) {
-    let results = this.engine.search(terms.join(' '));
-    if (!results || !results.length) return null;
-    let ids = [];
+    const results = this.engine.search(terms.join(' '));
+    if (!results || results.length <= 0) {
+      return null;
+    }
+
+    const ids = [];
     for (let i = 0; i < results.length; i++) {
-      if (results[i].score != results[0].score) break;
+      if (results[i].score !== results[0].score) {
+        break;
+      }
+
       ids.push(results[i].id);
     }
+
     ids.sort((a, b) => parseFloat(a) - parseFloat(b));
     return this.findById(ids[0]);
   }
@@ -18999,14 +19006,14 @@ class Seraph {
   findById(id) {
     return this.db
       .get('servants')
-      .find({id: id})
+      .find({id})
       .value();
   }
 
   findByRarity(rarity) {
     return this.db
       .get('servants')
-      .filter({rarity: rarity})
+      .filter({rarity})
       .value();
   }
 }
