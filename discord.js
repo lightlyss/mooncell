@@ -12,7 +12,7 @@ const fate = new Fate(seraph);
 const sheba = new Sheba('docs/img/');
 
 // Helpers
-let embed = svt => new Discord.RichEmbed()
+const embed = svt => new Discord.RichEmbed()
   .attachFile(sheba.getImgPath(svt.id))
   .setAuthor(svt.name)
   .setDescription(`*${svt.avail} ${svt.rarity}:sparkles: ${svt.className}*`)
@@ -31,11 +31,17 @@ client.on('ready', () => client.user.setPresence({
 }));
 
 client.on('message', async msg => {
-  if (!msg.isMentioned(client.user)) return;
-  let query = msg.content.trim().split(/ +/).filter(q => !q.startsWith('<@'));
-  let svt = !query.length ? fate.summon() : seraph.query(query);
-  if (!svt || !svt.id) return msg.react('🤔');
-  let color = await sheba.computeColor(svt.id);
+  if (!msg.isMentioned(client.user)) {
+    return;
+  }
+
+  const query = msg.content.trim().split(/ +/).filter(q => !q.startsWith('<@'));
+  const svt = query.length > 0 ? seraph.query(query) : fate.summon();
+  if (!svt || !svt.id) {
+    return msg.react('🤔');
+  }
+
+  const color = await sheba.computeColor(svt.id);
   return msg.reply({embed: embed(svt).setColor(color)});
 });
 

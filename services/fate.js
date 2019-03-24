@@ -10,7 +10,7 @@ class Fate {
   }
 
   summon() {
-    let rn = random();
+    const rn = random();
     let pivot = 0;
     let pool = [];
     for (let r = 0; r < this.rates.length; r++) {
@@ -20,7 +20,8 @@ class Fate {
         break;
       }
     }
-    return pool[Math.floor(random()*pool.length)];
+
+    return pool[Math.floor(random() * pool.length)];
   }
 }
 
