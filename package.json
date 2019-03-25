@@ -1,14 +1,22 @@
 {
   "name": "mooncell",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "A basic lookup system for servants of Fate/Grand Order",
   "main": "discord.js",
+  "engines": {
+    "node": ">=10.0.0"
+  },
   "scripts": {
     "start": "node discord.js",
-    "test": "jest --coverage",
-    "test-ci": "jest --coverage --coverageReporters=text-lcov | coveralls",
+    "test": "xo && jest --coverage",
+    "test-ci": "xo && jest --coverage --coverageReporters=text-lcov | coveralls",
     "reset-db": "cd docs/json && node automaton.js akasha.db akasha.json",
     "build": "browserify services/seraph.js -s Seraph -o docs/js/seraph.js && browserify services/sheba.js -s Sheba -o docs/js/sheba.js"
+  },
+  "xo": {
+    "envs": ["node", "jest"],
+    "space": true,
+    "ignores": ["docs"]
   },
   "repository": {
     "type": "git",
@@ -34,6 +42,7 @@
   "devDependencies": {
     "browserify": "16.2.3",
     "coveralls": "3.0.3",
-    "jest": "24.5.0"
+    "jest": "24.5.0",
+    "xo": "0.24.0"
   }
 }

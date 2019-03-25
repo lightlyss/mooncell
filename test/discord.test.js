@@ -1,48 +1,56 @@
 const fs = require('fs');
 
 // Setup environment------------------------------------------------------------
-beforeEach(() =>  {
+beforeEach(() => {
   jest.mock('dotenv', () => ({
     config: () => null
   }));
   jest.mock('discord.js', () => ({
     Client: class extends require('events') {
       login() {}
+
       get user() {
         return {
           username: 'Moon Cell',
           setPresence: () => null
-        }
+        };
       }
     },
     RichEmbed: class {
       constructor() {
         this.data = {};
       }
+
       setAuthor(a) {
         this.data.author = a;
         return this;
       }
+
       setDescription(d) {
         this.data.description = d;
         return this;
       }
+
       setImage(i) {
         this.data.image = i;
         return this;
       }
+
       setFooter(f) {
         this.data.footer = f;
         return this;
       }
+
       setColor(c) {
         this.data.color = c;
         return this;
       }
+
       addField(k, v) {
         this.data[k] = v;
         return this;
       }
+
       attachFile(f) {
         this.data.file = f;
         return this;
@@ -51,21 +59,21 @@ beforeEach(() =>  {
   }));
 });
 
-afterEach(() =>  {
-    jest.resetModules();
+afterEach(() => {
+  jest.resetModules();
 });
 
-let sendMsg = msg => {
-  let client = require('../discord.js');
+const sendMsg = msg => {
+  const client = require('../discord.js');
   client.emit('ready');
   client.emit('message', msg);
 };
 
 // Trivial cases----------------------------------------------------------------
 test('ignores when not mentioned', () => {
-  let msg = {
+  const msg = {
     content: '<@30422> jeanne alter',
-    isMentioned: user => user.username != 'Moon Cell',
+    isMentioned: user => user.username !== 'Moon Cell',
     react: jest.fn(),
     reply: jest.fn()
   };
@@ -75,9 +83,9 @@ test('ignores when not mentioned', () => {
 });
 
 test('reacts when not found', () => {
-  let msg = {
+  const msg = {
     content: '<@30422> theresa apocalypse',
-    isMentioned: user => user.username == 'Moon Cell',
+    isMentioned: user => user.username === 'Moon Cell',
     react: jest.fn(),
     reply: jest.fn()
   };
@@ -100,11 +108,11 @@ const qc = [
   {n: 'performs modifier queries', i: '<@0> saber lily', o: 'Altria Pendragon (Lily)', c: '#e6e3d8'},
   {n: 'performs autocorrect on modifier queries', i: '<@0> jalter lily', o: 'Jeanne d\'Arc Alter Santa Lily', c: '#eab6ba'}
 ];
-for (let c of qc) {
+for (const c of qc) {
   test(c.n, done => {
-    let msg = {
+    const msg = {
       content: c.i,
-      isMentioned: user => user.username == 'Moon Cell',
+      isMentioned: user => user.username === 'Moon Cell',
       react: jest.fn(),
       reply: o => {
         expect(msg.react.mock.calls.length).toBe(0);
@@ -127,13 +135,13 @@ const sc = [
   {rng: 0.98, i: '  <@0xDEAD>', r: '4'},
   {rng: 0.999, i: '<@>', r: '5'}
 ];
-for (let c of sc) {
-  let mock_rng = c.rng;
+for (const c of sc) {
+  const mockRng = c.rng;
   test(`summons ${c.r}* servants`, done => {
-    jest.mock('math-random', () => () => mock_rng);
-    let msg = {
+    jest.mock('math-random', () => () => mockRng);
+    const msg = {
       content: c.i,
-      isMentioned: user => user.username == 'Moon Cell',
+      isMentioned: user => user.username === 'Moon Cell',
       react: jest.fn(),
       reply: o => {
         expect(msg.react.mock.calls.length).toBe(0);
