@@ -14,6 +14,7 @@ Discord bot and web interface.
 Queries are accepted via any message that mentions the bot user.
 Empty queries will be treated as random single summon requests, mostly following
 the standard rates of Saint Quartz banners.
+![demo](demo.png)
 
 ## Bot Setup
 Set an access `TOKEN` inside a `.env` file.
@@ -40,7 +41,7 @@ npm test
 ```
 Any adjustments to functionality in `services/` should be pushed to the web UI.
 ```bash
-npm test
 npm run build
+npm test
 ```
 All these operations are idempotent.
