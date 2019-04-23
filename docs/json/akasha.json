@@ -6148,7 +6148,7 @@
       ],
       "avail": "StoryLocked",
       "cost": "12",
-      "align": "Lawful Evil",
+      "align": "Lawful Good",
       "bondId": "285",
       "art": "Ishida Akira",
       "voice": "Kawasumi Ayako",
@@ -6500,9 +6500,9 @@
       "deck": "QAAAB(A)",
       "ascs": [
         "Caster Piece x5",
-        "Void's Dust x15, Caster Piece x12",
-        "Eternal Gear x5, Forbidden Page x10, Caster Monument x5",
-        "Phoenix Feather x10, Eternal Gear x10, Caster Monument x12"
+        "Caster Piece x12",
+        "Caster Monument x5",
+        "Caster Monument x12"
       ],
       "upgrades": "-",
       "avail": "Unavailable",
@@ -7248,7 +7248,7 @@
         "3",
         "2",
         "1",
-        "4",
+        "7",
         "1"
       ],
       "crits": [
@@ -8362,8 +8362,7 @@
         "Proof of Hero x10, Evil Bone x10",
         "Void's Dust x10, Black Beast Grease x10",
         "Eternal Gear x10, Tearstone of Blood x10",
-        "Spirit Root x10, Dragon's Reverse Scale x10",
-        "Mystic Spinal Fluid x10, Deadly Poisonous Needle x10, Black Beast Grease x5, Heart of the Foreign God x5"
+        "Spirit Root x10, Dragon's Reverse Scale x10"
       ],
       "upgrades": [
         "Proof of Hero x10",
@@ -11495,7 +11494,7 @@
     },
     {
       "id": "148",
-      "name": "Jaguarman",
+      "name": "Jaguar Warrior",
       "className": "Lancer",
       "rarity": "3",
       "growth": "Semi Reverse S",
@@ -11820,9 +11819,9 @@
       "deck": "QAABB(B)",
       "ascs": [
         "Caster Piece x5",
-        "Caster Piece x12, Eternal Gear x8",
-        "Caster Monument x5, Forbidden Page x10, Scarab of Wisdom x2",
-        "Caster Monument x12, Scarab of Wisdom x4, Dragon's Reverse Scale x5"
+        "Caster Piece x12",
+        "Caster Monument x5",
+        "Caster Monument x12"
       ],
       "upgrades": "-",
       "avail": "Unavailable",
@@ -12206,8 +12205,8 @@
         "Magic Gem of Archer x10, Eternal Gear x4",
         "Secret Gem of Archer x4, Eternal Gear x8",
         "Secret Gem of Archer x10, Fool's Chain x12",
-        "Fool's Chain x24, Heart of the Foreign God x2",
-        "Heart of the Foreign God x6, Shell of Reminiscence x20",
+        "Fool's Chain x24, Cursed Beast Gallstone x2",
+        "Cursed Beast Gallstone x6, Shell of Reminiscence x20",
         "Crystalized Lore x1"
       ],
       "avail": "StoryLocked",
@@ -12499,7 +12498,7 @@
       "actives": [
         "Demon of the Battlefield B",
         "Disengage C",
-        "Kyokuchuu Hatto EX"
+        "Laws of the Shinsengumi EX"
       ],
       "passives": "Madness Enhancement D+",
       "np": "Shinsengumi",
@@ -12570,9 +12569,9 @@
         "Weak to Enuma Elish"
       ],
       "actives": [
-        "Golden Rule (Misfortune) B",
+        "Golden Rule (Evil) B",
         "Innocent Monster (Flame) C",
-        "Beloved Mistress of the Sun EX"
+        "Consort of the Sun EX"
       ],
       "passives": "Madness Enhancement E+",
       "np": "Kenran Makai Nichirinjou",
@@ -13002,7 +13001,7 @@
     },
     {
       "id": "168",
-      "name": "B e a s t III/R",
+      "name": "Beast III/R",
       "className": "Beast",
       "rarity": "5",
       "growth": "Semi S",
@@ -17514,7 +17513,7 @@
       "name": "Xiang Yu",
       "className": "Berserker",
       "rarity": "5",
-      "growth": "-",
+      "growth": "S",
       "lv": "90",
       "hps": [
         "2019",
@@ -17587,7 +17586,7 @@
       "name": "Lan Ling Wang",
       "className": "Saber",
       "rarity": "4",
-      "growth": "-",
+      "growth": "Reverse S",
       "lv": "80",
       "hps": [
         "2020",
@@ -17665,7 +17664,7 @@
       "name": "Qin Liangyu",
       "className": "Lancer",
       "rarity": "4",
-      "growth": "-",
+      "growth": "S",
       "lv": "80",
       "hps": [
         "2142",
@@ -17739,7 +17738,7 @@
       "name": "Qin Shi Huang",
       "className": "Ruler",
       "rarity": "5",
-      "growth": "-",
+      "growth": "Reverse S",
       "lv": "90",
       "hps": [
         "2321",
@@ -17773,7 +17772,7 @@
         "Humanoid",
         "Servant",
         "Weak to Enuma Elish",
-        "King"
+        "Sovereign"
       ],
       "actives": [
         "Burning of Books A",
@@ -17813,7 +17812,7 @@
       "name": "Yu Meiren",
       "className": "Assassin",
       "rarity": "4",
-      "growth": "-",
+      "growth": "Reverse S",
       "lv": "80",
       "hps": [
         "2142",
@@ -17888,7 +17887,7 @@
       "name": "Red Hare",
       "className": "Rider",
       "rarity": "3",
-      "growth": "-",
+      "growth": "Semi Reverse S",
       "lv": "70",
       "hps": [
         "1886",
@@ -17964,7 +17963,7 @@
       "name": "Bradamante",
       "className": "Lancer",
       "rarity": "5",
-      "growth": "-",
+      "growth": "Linear",
       "lv": "90",
       "hps": [
         "2300",
@@ -18039,7 +18038,7 @@
       "name": "Quetzalcoatl (Samba/Santa)",
       "className": "Ruler",
       "rarity": "4",
-      "growth": "-",
+      "growth": "Reverse S",
       "lv": "80",
       "hps": [
         "1809",
@@ -18074,7 +18073,7 @@
         "Humanoid",
         "Weak to Enuma Elish",
         "Sky or Earth Servant",
-        "King"
+        "Sovereign"
       ],
       "actives": [
         "Sambista B",
@@ -18119,7 +18118,7 @@
       "name": "Beni Enma",
       "className": "Saber",
       "rarity": "5",
-      "growth": "-",
+      "growth": "S",
       "lv": "90",
       "hps": [
         "2047",
@@ -18186,7 +18185,7 @@
         "Quiet Antique Bell x18, Kotan Magatama x24",
         "Crystalized Lore x1"
       ],
-      "avail": "-",
+      "avail": "Limited",
       "cost": "16",
       "align": "Lawful Good",
       "bondId": "935",
@@ -18199,7 +18198,7 @@
       "name": "Li Shuwen (Assassin)",
       "className": "Assassin",
       "rarity": "5",
-      "growth": "-",
+      "growth": "S",
       "lv": "90",
       "hps": [
         "1843",
@@ -18272,7 +18271,7 @@
       "name": "Miyu Edelfelt",
       "className": "Caster",
       "rarity": "4",
-      "growth": "-",
+      "growth": "S",
       "lv": "80",
       "hps": [
         "1920",
@@ -18348,7 +18347,7 @@
       "name": "Murasaki Shikibu",
       "className": "Caster",
       "rarity": "5",
-      "growth": "-",
+      "growth": "S",
       "lv": "90",
       "hps": [
         "1882",
@@ -18424,7 +18423,7 @@
       "name": "Kingprotea",
       "className": "Alter Ego",
       "rarity": "5",
-      "growth": "-",
+      "growth": "Reverse S",
       "lv": "90",
       "hps": [
         "1956",
@@ -18489,7 +18488,7 @@
         "Magic Gem of Saber x5, Magic Gem of Rider x5",
         "Secret Gem of Saber x5, Secret Gem of RIder x5",
         "Secret Gem of Saber x12, Secret Gem of Rider x12",
-        "Ring of Giant x5, Dawn's Light Core x5",
+        "Ring of Giants x5, Dawn's Light Core x5",
         "Dragon's Reverse Scale x9, Spirit Root x9",
         "Crystalized Lore x1"
       ],
@@ -18499,6 +18498,149 @@
       "bondId": "989",
       "art": "Wada Arco",
       "voice": "Han Megumi",
+      "valId": null
+    },
+    {
+      "id": "239",
+      "name": "Kama",
+      "className": "Assassin",
+      "rarity": "5",
+      "growth": "Semi S",
+      "lv": "90",
+      "hps": [
+        "1890",
+        "12889",
+        "14120"
+      ],
+      "atks": [
+        "1781",
+        "11528",
+        "12619"
+      ],
+      "npGains": [
+        "0.74",
+        "4"
+      ],
+      "hitCounts": [
+        "4",
+        "3",
+        "4",
+        "5",
+        "10"
+      ],
+      "crits": [
+        "100",
+        "25"
+      ],
+      "death": "31.6",
+      "attr": "Sky",
+      "traits": [
+        "Female",
+        "Servant",
+        "Humanoid",
+        "Divine",
+        "Sky or Earth Servant",
+        "Pseudo-Servant",
+        "Riding",
+        "Weak to Enuma Elish"
+      ],
+      "actives": [
+        "Blessings of the Goddess B",
+        "Ananga EX",
+        "Mara Papiyas EX"
+      ],
+      "passives": [
+        "Magic Resistance A",
+        "Riding A",
+        "Independent Manifestation C",
+        "Core of the Love God B"
+      ],
+      "np": "Kama Sammohana",
+      "deck": "QQABB(Q)",
+      "ascs": [
+        "Assassin Piece x5",
+        "Assassin Piece x12, Tearstone of Blood x5",
+        "Assassin Monument x5, Chichi Divine Wine x4, Tsukumo Kagami x2",
+        "Assassin Monument x12, Tsukumo Kagami x4, Void's Dust x24"
+      ],
+      "upgrades": [
+        "Gem of Assassin x5",
+        "Gem of Assassin x12",
+        "Magic Gem of Assassin x5",
+        "Magic Gem of Assassin x12, Chichi Divine Wine x2",
+        "Secret Gem of Assassin x5, Chichi Divine Wine x4",
+        "Secret Gem of Assassin x12, Tearstone of Blood x3",
+        "Tearstone of Blood x6, Heart of the Foreign God x3",
+        "Heart of the Foreign God x8, Lamp of Evil-Sealing x15",
+        "Crystalized Lore x1"
+      ],
+      "avail": "Limited",
+      "cost": "16",
+      "align": "Chaotic Evil",
+      "bondId": "1003",
+      "art": "ReDrop",
+      "voice": "Shitaya Noriko",
+      "valId": null
+    },
+    {
+      "id": "240",
+      "name": "Beast III/L",
+      "className": "Beast",
+      "rarity": "5",
+      "growth": "-",
+      "lv": "90",
+      "hps": [
+        "2745",
+        "18720",
+        "18720"
+      ],
+      "atks": [
+        "2080",
+        "13464",
+        "13464"
+      ],
+      "npGains": [
+        "0.58",
+        "3"
+      ],
+      "hitCounts": [
+        "4",
+        "4",
+        "4",
+        "4",
+        "10"
+      ],
+      "crits": [
+        "100",
+        "10.2"
+      ],
+      "death": "0",
+      "attr": "Beast",
+      "traits": [
+        "Female",
+        "Humanoid",
+        "Divine",
+        "Not Weak to Enuma Elish",
+        "Demonic",
+        "Sovereign"
+      ],
+      "actives": "-",
+      "passives": "-",
+      "np": "Mara Avaruddha",
+      "deck": "QQABB(Q)",
+      "ascs": [
+        "Beast Piece x5",
+        "Beast Piece x12",
+        "Beast Monument x5",
+        "Beast Monument x12"
+      ],
+      "upgrades": "-",
+      "avail": "Unavailable",
+      "cost": "16",
+      "align": "Chaotic Evil",
+      "bondId": "0",
+      "art": "ReDrop",
+      "voice": "Shitaya Noriko",
       "valId": null
     }
   ]

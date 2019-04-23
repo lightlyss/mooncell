@@ -18,7 +18,7 @@ const embed = svt => new Discord.RichEmbed()
   .setDescription(`*${svt.avail} ${svt.rarity}:sparkles: ${svt.className}*`)
   .setImage(`attachment://${sheba.getImgName(svt.id)}`)
   .addField('Cards', `${svt.deck} **|** ${svt.np}`)
-  .addField('Skills', svt.actives.join('\n'))
+  .addField('Skills', Array.isArray(svt.actives) ? svt.actives.join('\n') : svt.actives)
   .setFooter(`LV${svt.lv} | ${svt.hps[1]}HP | ${svt.atks[1]}ATK`);
 
 // Configure Discord

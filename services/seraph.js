@@ -9,6 +9,7 @@ class Seraph {
     this.db = low(adapter);
     this.engine = new Engine({
       fields: ['name', 'className'],
+      processTerm: term => term.toLowerCase(),
       searchOptions: {
         prefix: true,
         fuzzy: 0.1,
