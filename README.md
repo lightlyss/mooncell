@@ -30,3 +30,17 @@ Black-box integration tests are provided using Jest.
 ```bash
 npm test
 ```
+
+## Patches
+To update the database, make the necessary changes to `docs/json/akasha.db` and
+add the new splash art into `docs/img/servants/`.
+```bash
+npm run reset-db
+npm test
+```
+Any adjustments to functionality in `services/` should be pushed to the web UI.
+```bash
+npm test
+npm run build
+```
+All these operations are idempotent.

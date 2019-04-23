@@ -1,6 +1,6 @@
 {
   "name": "mooncell",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A basic lookup system for servants of Fate/Grand Order",
   "main": "discord.js",
   "engines": {
@@ -14,9 +14,14 @@
     "build": "browserify services/seraph.js -s Seraph -o docs/js/seraph.js && browserify services/sheba.js -s Sheba -o docs/js/sheba.js"
   },
   "xo": {
-    "envs": ["node", "jest"],
+    "envs": [
+      "node",
+      "jest"
+    ],
     "space": true,
-    "ignores": ["docs"]
+    "ignores": [
+      "docs"
+    ]
   },
   "repository": {
     "type": "git",
