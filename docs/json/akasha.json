@@ -372,7 +372,9 @@
         "Intuition B",
         "Charisma E"
       ],
-      "passives": "Magic Resistance B",
+      "passives": [
+        "Magic Resistance B"
+      ],
       "np": "Excalibur Morgan",
       "deck": "QAABB(B)",
       "ascs": [
@@ -613,7 +615,9 @@
         "Disengage A",
         "Dragon-Slayer A, Dragon-Slayer A++"
       ],
-      "passives": "Riding B",
+      "passives": [
+        "Riding B"
+      ],
       "np": "Balmung",
       "deck": "QAABB(B)",
       "ascs": [
@@ -1629,7 +1633,9 @@
         "Imposing Stance B",
         "Blank Subscription List"
       ],
-      "passives": "Magic Resistance C+",
+      "passives": [
+        "Magic Resistance C+"
+      ],
       "np": "Gohyaku Rakan Fudarakutokai",
       "deck": "QQAAB(A)",
       "ascs": [
@@ -1781,7 +1787,9 @@
         "Battle Continuation A",
         "Warrior's Roar B"
       ],
-      "passives": "Magic Resistance C",
+      "passives": [
+        "Magic Resistance C"
+      ],
       "np": "Thermopylae Enomotia",
       "deck": "QQABB(B)",
       "ascs": [
@@ -1856,7 +1864,9 @@
         "Imperial Privilege EX",
         "Seven Hills A"
       ],
-      "passives": "Magic Resistance B",
+      "passives": [
+        "Magic Resistance B"
+      ],
       "np": "Magna Voluisse Magnum",
       "deck": "QQABB(B)",
       "ascs": [
@@ -2088,7 +2098,9 @@
         "Pirate's Glory B",
         "Gentlemanly Love C"
       ],
-      "passives": "Magic Resistance E",
+      "passives": [
+        "Magic Resistance E"
+      ],
       "np": "Queen Anne's Revenge",
       "deck": "QAABB(B)",
       "ascs": [
@@ -2631,7 +2643,9 @@
         "Aesthetic Appreciation E-",
         "Evil Eye of the Abyss C"
       ],
-      "passives": "Territory Creation B",
+      "passives": [
+        "Territory Creation B"
+      ],
       "np": "Prelati's Spellbook",
       "deck": "QAAAB(B)",
       "ascs": [
@@ -2780,7 +2794,9 @@
         "Self-Preservation B",
         "The King's Men C"
       ],
-      "passives": "Territory Creation C",
+      "passives": [
+        "Territory Creation C"
+      ],
       "np": "First Folio",
       "deck": "QAAAB(B)",
       "ascs": [
@@ -2931,7 +2947,9 @@
         "Aesthetic Appreciation B",
         "Eine kleine Nachtmusik EX"
       ],
-      "passives": "Territory Creation B",
+      "passives": [
+        "Territory Creation B"
+      ],
       "np": "Requiem for Death",
       "deck": "QAAAB(A)",
       "ascs": [
@@ -3161,7 +3179,9 @@
         "Vitrify B+",
         "Knowledge of the Sowa B, Knowledge of the Sowa B++"
       ],
-      "passives": "Presence Concealment D",
+      "passives": [
+        "Presence Concealment D"
+      ],
       "np": "Tsubame Gaeshi",
       "deck": "QQQAB(Q)",
       "ascs": [
@@ -3234,7 +3254,9 @@
         "Self-Modification C",
         "Protection from Wind A"
       ],
-      "passives": "Presence Concealment A+",
+      "passives": [
+        "Presence Concealment A+"
+      ],
       "np": "Zabaniya",
       "deck": "QQQAB(Q)",
       "ascs": [
@@ -3386,7 +3408,9 @@
         "Planning B",
         "Insolent A"
       ],
-      "passives": "Presence Concealment B",
+      "passives": [
+        "Presence Concealment B"
+      ],
       "np": "All I Do Is Kill",
       "deck": "QQQAB(Q)",
       "ascs": [
@@ -3459,7 +3483,9 @@
         "Medicine A, Medicine A+",
         "Human Study B"
       ],
-      "passives": "Presence Concealment D",
+      "passives": [
+        "Presence Concealment D"
+      ],
       "np": "L'amour Espoir",
       "deck": "QQQAB(B)",
       "ascs": [
@@ -3533,7 +3559,9 @@
         "Siren Song B",
         "Mental Corruption A"
       ],
-      "passives": "Presence Concealment A",
+      "passives": [
+        "Presence Concealment A"
+      ],
       "np": "Christine Christine",
       "deck": "QQQAB(A)",
       "ascs": [
@@ -3606,7 +3634,9 @@
         "Pheromone B",
         "Double-Cross B"
       ],
-      "passives": null,
+      "passives": [
+        ""
+      ],
       "np": "Mata Hari",
       "deck": "QQQAB(A)",
       "ascs": [
@@ -3680,7 +3710,9 @@
         "Torture Technique A",
         "Bath of Fresh Blood A"
       ],
-      "passives": "Presence Concealment D",
+      "passives": [
+        "Presence Concealment D"
+      ],
       "np": "Phantom Maiden",
       "deck": "QQQAB(B)",
       "ascs": [
@@ -3909,7 +3941,9 @@
         "Defiant B",
         "Chaotic Villain A"
       ],
-      "passives": "Madness Enhancement A",
+      "passives": [
+        "Madness Enhancement A"
+      ],
       "np": "God Force",
       "deck": "QABBB(B)",
       "ascs": [
@@ -3983,7 +4017,9 @@
         "Unyielding Will A",
         "Triumphant Return of the Sword B"
       ],
-      "passives": "Madness Enhancement EX",
+      "passives": [
+        "Madness Enhancement EX"
+      ],
       "np": "Crying Warmonger",
       "deck": "QABBB(B)",
       "ascs": [
@@ -4137,7 +4173,9 @@
         "Morph C, Legend of Dracula A+",
         "Battle Continuation A"
       ],
-      "passives": "Madness Enhancement EX",
+      "passives": [
+        "Madness Enhancement EX"
+      ],
       "np": "Kazikli Bey",
       "deck": "QAABB(A)",
       "ascs": [
@@ -4212,7 +4250,9 @@
         "Natural Demon A++",
         "Labrys of the Abyss C"
       ],
-      "passives": "Madness Enhancement B",
+      "passives": [
+        "Madness Enhancement B"
+      ],
       "np": "Chaos Labyrinth",
       "deck": "QABBB(A)",
       "ascs": [
@@ -4287,7 +4327,9 @@
         "Imperial Privilege A",
         "Glory of Past Days B"
       ],
-      "passives": "Madness Enhancement A+",
+      "passives": [
+        "Madness Enhancement A+"
+      ],
       "np": "Flucticulus Diana",
       "deck": "QABBB(A)",
       "ascs": [
@@ -4361,7 +4403,9 @@
         "Disengage A",
         "Battle Continuation A"
       ],
-      "passives": "Madness Enhancement B",
+      "passives": [
+        "Madness Enhancement B"
+      ],
       "np": "Athanatoi Ten Thousand",
       "deck": "QABBB(B)",
       "ascs": [
@@ -4436,7 +4480,9 @@
         "Stalking B",
         "Flame-Colored Kiss A"
       ],
-      "passives": "Madness Enhancement EX",
+      "passives": [
+        "Madness Enhancement EX"
+      ],
       "np": "Tenshin Kashou Zanmai",
       "deck": "QABBB(B)",
       "ascs": [
@@ -4510,7 +4556,9 @@
         "Battle Continuation B",
         "Half-Dead Bloodaxe A+"
       ],
-      "passives": "Madness Enhancement B",
+      "passives": [
+        "Madness Enhancement B"
+      ],
       "np": "Bloodbath Crown",
       "deck": "QABBB(B)",
       "ascs": [
@@ -4585,7 +4633,9 @@
         "Curse E, Cursed Layer - Cat Sunlight B",
         "Morph B, Morph (Lunch) A"
       ],
-      "passives": "Madness Enhancement C",
+      "passives": [
+        "Madness Enhancement C"
+      ],
       "np": "Sansan Nikkou Hiruyasumi Shuchi Nikurin",
       "deck": "QABBB(Q)",
       "ascs": [
@@ -4659,7 +4709,9 @@
         "True Name Revelation B",
         "Divine Judgement A"
       ],
-      "passives": "Magic Resistance EX",
+      "passives": [
+        "Magic Resistance EX"
+      ],
       "np": "Luminosite Eternelle",
       "deck": "QAAAB(A)",
       "ascs": [
@@ -5198,7 +5250,9 @@
         "Marksmanship B",
         "Combination C"
       ],
-      "passives": "Magic Resistance D",
+      "passives": [
+        "Magic Resistance D"
+      ],
       "np": "Caribbean Free Bird",
       "deck": "QQAAB(Q)",
       "ascs": [
@@ -5504,7 +5558,9 @@
         "Primordial Rune (Scathach)",
         "God-Slayer B"
       ],
-      "passives": "Magic Resistance A",
+      "passives": [
+        "Magic Resistance A"
+      ],
       "np": "Gae Bolg Alternative",
       "deck": "QQABB(Q)",
       "ascs": [
@@ -5579,7 +5635,9 @@
         "Love Spot C",
         "Knight's Strategy B"
       ],
-      "passives": "Magic Resistance B",
+      "passives": [
+        "Magic Resistance B"
+      ],
       "np": "Gae Dearg & Gae Buidhe",
       "deck": "QQAAB(Q)",
       "ascs": [
@@ -5813,7 +5871,9 @@
         "Morph A+",
         "Meanwhile A"
       ],
-      "passives": "Territory Creation A",
+      "passives": [
+        "Territory Creation A"
+      ],
       "np": "Nursery Rhyme",
       "deck": "QAAAB(A)",
       "ascs": [
@@ -5887,7 +5947,9 @@
         "Information Erasure B",
         "Surgery E"
       ],
-      "passives": "Presence Concealment A+",
+      "passives": [
+        "Presence Concealment A+"
+      ],
       "np": "Maria The Ripper",
       "deck": "QQQAB(Q)",
       "ascs": [
@@ -6276,7 +6338,9 @@
         "Mechanical Armor EX, Mechanical Armor EX(+)",
         "Overload D"
       ],
-      "passives": "Item Construction (Fake) A",
+      "passives": [
+        "Item Construction (Fake) A"
+      ],
       "np": "Dimension of Steam",
       "deck": "QAABB(B)",
       "ascs": [
@@ -6351,7 +6415,9 @@
         "Panicky Voice A",
         "Self-Modification D"
       ],
-      "passives": "Presence Concealment A",
+      "passives": [
+        "Presence Concealment A"
+      ],
       "np": "Dangerous Game",
       "deck": "QQABB(B)",
       "ascs": [
@@ -6425,7 +6491,9 @@
         "Wail of the Living Dead D, Wail of the Living Dead C",
         "Overload C"
       ],
-      "passives": "Madness Enhancement D",
+      "passives": [
+        "Madness Enhancement D"
+      ],
       "np": "Blasted Tree",
       "deck": "QABBB(Q)",
       "ascs": [
@@ -6494,8 +6562,12 @@
         "Weak to Enuma Elish",
         "Earth or Sky"
       ],
-      "actives": "-",
-      "passives": "-",
+      "actives": [
+        "-"
+      ],
+      "passives": [
+        "-"
+      ],
       "np": "Ars Almadel Salomons",
       "deck": "QAAAB(A)",
       "ascs": [
@@ -6504,14 +6576,16 @@
         "Caster Monument x5",
         "Caster Monument x12"
       ],
-      "upgrades": "-",
+      "upgrades": [
+        "-"
+      ],
       "avail": "Unavailable",
       "cost": "16",
       "align": "Lawful Good",
       "bondId": "0",
       "art": "Takeuchi Takashi",
       "voice": "Sugita Tomokazu",
-      "valId": null
+      "valId": ""
     },
     {
       "id": "84",
@@ -6960,7 +7034,9 @@
         "Intuition B, Inspired Hero A+",
         "Battle Continuation B"
       ],
-      "passives": "Madness Enhancement E-",
+      "passives": [
+        "Madness Enhancement E-"
+      ],
       "np": "Grendel Buster",
       "deck": "QABBB(B)",
       "ascs": [
@@ -7268,7 +7344,9 @@
         "Baptism Sacrament B+",
         "Divine Judgement C, Divine Judgement (Fake) C++"
       ],
-      "passives": "Magic Resistance A",
+      "passives": [
+        "Magic Resistance A"
+      ],
       "np": "Twin Arm - Big Crunch",
       "deck": "QAABB(B)",
       "ascs": [
@@ -7580,7 +7658,9 @@
         "Understanding of the Human Body A",
         "Angel's Cry EX"
       ],
-      "passives": "Madness Enhancement EX",
+      "passives": [
+        "Madness Enhancement EX"
+      ],
       "np": "Nightingale Pledge",
       "deck": "QAABB(A)",
       "ascs": [
@@ -7969,7 +8049,9 @@
         "Sphere Boundary B",
         "Juezhao B"
       ],
-      "passives": "Magic Resistance D",
+      "passives": [
+        "Magic Resistance D"
+      ],
       "np": "Shen Qiang Wu Er Da",
       "deck": "QQAAB(A)",
       "ascs": [
@@ -8591,7 +8673,9 @@
         "Wide Specialization A+",
         "Battle Retreat B"
       ],
-      "passives": "Presence Concealment A",
+      "passives": [
+        "Presence Concealment A"
+      ],
       "np": "Zabaniya",
       "deck": "QQAAB(A)",
       "ascs": [
@@ -8983,7 +9067,9 @@
         "Animal Communication C",
         "Natural Body A"
       ],
-      "passives": "Divinity C",
+      "passives": [
+        "Divinity C"
+      ],
       "np": "Golden Drive, Good Night",
       "deck": "QQABB(Q)",
       "ascs": [
@@ -9058,7 +9144,9 @@
         "Disengage A",
         "Morph A"
       ],
-      "passives": "Madness Enhancement B",
+      "passives": [
+        "Madness Enhancement B"
+      ],
       "np": "Rashomon Dai Engi",
       "deck": "QABBB(B)",
       "ascs": [
@@ -9131,7 +9219,9 @@
         "Ninjutsu A+++",
         "Suspicious Shadow C"
       ],
-      "passives": "Presence Concealment A+",
+      "passives": [
+        "Presence Concealment A+"
+      ],
       "np": "Immortal Chaos Brigade",
       "deck": "QQQAB(Q)",
       "ascs": [
@@ -10383,7 +10473,9 @@
         "Primordial Rune (Sea) A",
         "Midsummer Mistakes C"
       ],
-      "passives": "Presence Concealment E",
+      "passives": [
+        "Presence Concealment E"
+      ],
       "np": "Gae Bolg Alternative",
       "deck": "QQQAB(Q)",
       "ascs": [
@@ -10534,7 +10626,9 @@
         "Natural Body (Sea) A",
         "Limbs of Jacob B"
       ],
-      "passives": "Magic Resistance EX",
+      "passives": [
+        "Magic Resistance EX"
+      ],
       "np": "Tarasque",
       "deck": "QABBB(B)",
       "ascs": [
@@ -10918,7 +11012,9 @@
         "Tactics B",
         "Innocent Monster A"
       ],
-      "passives": "Magic Resistance C",
+      "passives": [
+        "Magic Resistance C"
+      ],
       "np": "Kazikli Bey",
       "deck": "QQABB(B)",
       "ascs": [
@@ -10992,7 +11088,9 @@
         "Self-Transformation A",
         "Ephemeral Dream EX"
       ],
-      "passives": "Magic Resistance A+",
+      "passives": [
+        "Magic Resistance A+"
+      ],
       "np": "La Grace Fille Noel",
       "deck": "QQABB(B)",
       "ascs": [
@@ -11145,7 +11243,9 @@
         "Presence Detection A+, Presence Detection A++",
         "Perfect Form A"
       ],
-      "passives": "Magic Resistance A",
+      "passives": [
+        "Magic Resistance A"
+      ],
       "np": "Enuma Elish",
       "deck": "QQQAB(B)",
       "ascs": [
@@ -11612,8 +11712,12 @@
         "Divine",
         "Not Weak to Enuma Elish"
       ],
-      "actives": "-",
-      "passives": "-",
+      "actives": [
+        "-"
+      ],
+      "passives": [
+        "-"
+      ],
       "np": "Nammu Duranki",
       "deck": "QAABB(A)",
       "ascs": [
@@ -11622,14 +11726,16 @@
         "Beast Monument x5",
         "Beast Monument x12"
       ],
-      "upgrades": "-",
+      "upgrades": [
+        "-"
+      ],
       "avail": "Unavailable",
       "cost": "16",
       "align": "Chaotic Evil",
       "bondId": "0",
       "art": "Yamanaka Kotetsu",
       "voice": "Yuuki Aoi",
-      "valId": null
+      "valId": ""
     },
     {
       "id": "150",
@@ -11749,8 +11855,12 @@
         "Not Weak to Enuma Elish",
         "Sovereign"
       ],
-      "actives": "-",
-      "passives": "-",
+      "actives": [
+        "-"
+      ],
+      "passives": [
+        "-"
+      ],
       "np": "Incineration Ceremony - Beleth",
       "deck": "QQABB(A)",
       "ascs": [
@@ -11759,14 +11869,16 @@
         "Beast Monument x5",
         "Beast Monument x12"
       ],
-      "upgrades": "-",
+      "upgrades": [
+        "-"
+      ],
       "avail": "Unavailable",
       "cost": "16",
       "align": "None",
       "bondId": "0",
       "art": "Yamanaka Kotetsu",
       "voice": "Sugita Tomokazu",
-      "valId": null
+      "valId": ""
     },
     {
       "id": "152",
@@ -11810,7 +11922,9 @@
         "Earth or Sky",
         "Sovereign"
       ],
-      "actives": "-",
+      "actives": [
+        "-"
+      ],
       "passives": [
         "Territory Creation A",
         "Item Construction C"
@@ -11823,14 +11937,16 @@
         "Caster Monument x5",
         "Caster Monument x12"
       ],
-      "upgrades": "-",
+      "upgrades": [
+        "-"
+      ],
       "avail": "Unavailable",
       "cost": "16",
       "align": "None",
       "bondId": "0",
       "art": "Takeuchi Takashi",
       "voice": "Suzumura Kenichi",
-      "valId": null
+      "valId": ""
     },
     {
       "id": "153",
@@ -11877,7 +11993,9 @@
         "Heavenly Eye A",
         "Emptiness A"
       ],
-      "passives": "Magic Resistance A",
+      "passives": [
+        "Magic Resistance A"
+      ],
       "np": "Rikudou Gorin Kurikara Tenshou",
       "deck": "QABBB(B)",
       "ascs": [
@@ -11907,7 +12025,7 @@
     },
     {
       "id": "154",
-      "name": "\"First Hassan\"",
+      "name": "First Hassan",
       "className": "Assassin",
       "rarity": "5",
       "growth": "S",
@@ -12500,7 +12618,9 @@
         "Disengage C",
         "Laws of the Shinsengumi EX"
       ],
-      "passives": "Madness Enhancement D+",
+      "passives": [
+        "Madness Enhancement D+"
+      ],
       "np": "Shinsengumi",
       "deck": "QQABB(B)",
       "ascs": [
@@ -12573,7 +12693,9 @@
         "Innocent Monster (Flame) C",
         "Consort of the Sun EX"
       ],
-      "passives": "Madness Enhancement E+",
+      "passives": [
+        "Madness Enhancement E+"
+      ],
       "np": "Kenran Makai Nichirinjou",
       "deck": "QABBB(B)",
       "ascs": [
@@ -13039,8 +13161,12 @@
         "Humanoid",
         "Not Weak to Enuma Elish"
       ],
-      "actives": "-",
-      "passives": "-",
+      "actives": [
+        "-"
+      ],
+      "passives": [
+        "-"
+      ],
       "np": "Sukhavati- Heaven's Hole",
       "deck": "QAABB(A)",
       "ascs": [
@@ -13049,14 +13175,16 @@
         "Beast Monument x5",
         "Beast Monument x12"
       ],
-      "upgrades": "-",
+      "upgrades": [
+        "-"
+      ],
       "avail": "Unavailable",
       "cost": "16",
       "align": "None",
       "bondId": "0",
       "art": "Wada Arco",
       "voice": "Tanaka Rie",
-      "valId": null
+      "valId": ""
     },
     {
       "id": "169",
@@ -13103,7 +13231,9 @@
         "Bed Chamber of Survival A+",
         "Counter-Hero A, Counter-Hero (Story) EX"
       ],
-      "passives": "Territory Creation A++",
+      "passives": [
+        "Territory Creation A++"
+      ],
       "np": "Alf Laylah wa Laylah",
       "deck": "QAAAB(A)",
       "ascs": [
@@ -13177,7 +13307,9 @@
         "Imperial Privilege B",
         "Empress Charisma A"
       ],
-      "passives": "Presence Concealment D",
+      "passives": [
+        "Presence Concealment D"
+      ],
       "np": "Gaomi Luozhi Jing",
       "deck": "QQABB(Q)",
       "ascs": [
@@ -13405,7 +13537,9 @@
         "Deductive Reasoning A+",
         "Baritsu B++"
       ],
-      "passives": "Territory Creation EX",
+      "passives": [
+        "Territory Creation EX"
+      ],
       "np": "Elementary, My Dear",
       "deck": "QQAAB(A)",
       "ascs": [
@@ -13479,7 +13613,9 @@
         "Bean Soup Lake A",
         "Popcorn Snowstorm B"
       ],
-      "passives": "Madness Enhancement D",
+      "passives": [
+        "Madness Enhancement D"
+      ],
       "np": "Marvelous Exploits",
       "deck": "QABBB(B)",
       "ascs": [
@@ -13791,7 +13927,9 @@
         "Atsumori Beat B",
         "Beach's Demon King of the Sixth Heaven A-"
       ],
-      "passives": "Madness Enhancement C",
+      "passives": [
+        "Madness Enhancement C"
+      ],
       "np": "NOBUNAGA THE ROCK 'N' ROLL",
       "deck": "QABBB(B)",
       "ascs": [
@@ -14344,7 +14482,9 @@
         "Curse of Orochi B",
         "Kouga-ryuu A"
       ],
-      "passives": "Presence Concealment A+",
+      "passives": [
+        "Presence Concealment A+"
+      ],
       "np": "Kuchiyose - Ibuki Daimyoujin Engi",
       "deck": "QQAAB(A)",
       "ascs": [
@@ -14418,7 +14558,9 @@
         "Martial Asceticism B",
         "Sen no Sen B+"
       ],
-      "passives": "Magic Resistance D+",
+      "passives": [
+        "Magic Resistance D+"
+      ],
       "np": "Oboro Urazuki Juuichi Shiki",
       "deck": "QQQAB(A)",
       "ascs": [
@@ -14569,7 +14711,9 @@
         "Ninjutsu A",
         "Karakuri Illusion Act B+"
       ],
-      "passives": "Presence Concealment A",
+      "passives": [
+        "Presence Concealment A"
+      ],
       "np": "Karakuri Genpou - Dongyuu",
       "deck": "QAABB(B)",
       "ascs": [
@@ -14955,7 +15099,9 @@
         "Spirit Ball Child A",
         "Protection of Tathagata B"
       ],
-      "passives": "Magic Resistance A",
+      "passives": [
+        "Magic Resistance A"
+      ],
       "np": "Chihisourei - Kasensou",
       "deck": "QQABB(B)",
       "ascs": [
@@ -16290,7 +16436,9 @@
         "Mind's Eye (Fake) C",
         "Fencing as Swift as a Falcon A"
       ],
-      "passives": "Presence Concealment A",
+      "passives": [
+        "Presence Concealment A"
+      ],
       "np": "Shimatsuken",
       "deck": "QQAAB(A)",
       "ascs": [
@@ -16996,7 +17144,9 @@
         "Witch of the Fallen A+",
         "Meurs Ou tu Dois EX"
       ],
-      "passives": "Madness Enhancement EX",
+      "passives": [
+        "Madness Enhancement EX"
+      ],
       "np": "Volkermord Feuerdrache",
       "deck": "QABBB(B)",
       "ascs": [
@@ -17553,7 +17703,9 @@
         "Tactical Frame B",
         "Martial Arts of the Supreme Ruler A"
       ],
-      "passives": "Evil Enhancement A+",
+      "passives": [
+        "Evil Enhancement A+"
+      ],
       "np": "Li Ba Shan Xi Qi Gaishi",
       "deck": "QABBB(Q)",
       "ascs": [
@@ -17705,7 +17857,9 @@
         "Fellowship of Loyal Soldiers B",
         "Defeating Thieves B"
       ],
-      "passives": "Magic Resistance C",
+      "passives": [
+        "Magic Resistance C"
+      ],
       "np": "Chongzhen Emperor's Four Poems",
       "deck": "QQAAB(A)",
       "ascs": [
@@ -17779,7 +17933,9 @@
         "Burying of Scholars A",
         "Eternal Emperor A"
       ],
-      "passives": "Magic Resistance B+",
+      "passives": [
+        "Magic Resistance B+"
+      ],
       "np": "The Domination Begining",
       "deck": "QAABB(A)",
       "ascs": [
@@ -17854,7 +18010,9 @@
         "Heaven's Feathered Woman A",
         "Bloodsucker C"
       ],
-      "passives": "Presence Concealment B",
+      "passives": [
+        "Presence Concealment B"
+      ],
       "np": "Eternal Lament",
       "deck": "QQABB(B)",
       "ascs": [
@@ -17930,7 +18088,9 @@
         "All Martial Arts (Horse) A",
         "Combat Mobility (Horse) B"
       ],
-      "passives": "Riding EX",
+      "passives": [
+        "Riding EX"
+      ],
       "np": "Immitation - God Force",
       "deck": "QQAAB(Q)",
       "ascs": [
@@ -18005,7 +18165,9 @@
         "Knight of the White Feather B+",
         "Magecraft Release A"
       ],
-      "passives": "Magic Resistance A",
+      "passives": [
+        "Magic Resistance A"
+      ],
       "np": "Bouclier de Atante",
       "deck": "QQAAB(Q)",
       "ascs": [
@@ -18238,7 +18400,9 @@
         "Sphere Boundary (Extreme) A-",
         "Yin-Yang Intersection B"
       ],
-      "passives": "Veteran A+",
+      "passives": [
+        "Veteran A+"
+      ],
       "np": "Wu Er Da",
       "deck": "QAABB(A)",
       "ascs": [
@@ -18498,7 +18662,7 @@
       "bondId": "989",
       "art": "Wada Arco",
       "voice": "Han Megumi",
-      "valId": null
+      "valId": ""
     },
     {
       "id": "239",
@@ -18580,7 +18744,7 @@
       "bondId": "1003",
       "art": "ReDrop",
       "voice": "Shitaya Noriko",
-      "valId": null
+      "valId": ""
     },
     {
       "id": "240",
@@ -18624,8 +18788,12 @@
         "Demonic",
         "Sovereign"
       ],
-      "actives": "-",
-      "passives": "-",
+      "actives": [
+        "-"
+      ],
+      "passives": [
+        "-"
+      ],
       "np": "Mara Avaruddha",
       "deck": "QQABB(Q)",
       "ascs": [
@@ -18634,14 +18802,16 @@
         "Beast Monument x5",
         "Beast Monument x12"
       ],
-      "upgrades": "-",
+      "upgrades": [
+        "-"
+      ],
       "avail": "Unavailable",
       "cost": "16",
       "align": "Chaotic Evil",
       "bondId": "0",
       "art": "ReDrop",
       "voice": "Shitaya Noriko",
-      "valId": null
+      "valId": ""
     }
   ]
 }

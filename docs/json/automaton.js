@@ -2,6 +2,8 @@
 * Akashic Records (False): Automaton
 */
 const fs = require('fs');
+const d3 = require('d3-dsv');
+
 const FIELDS = [
   'id', 'name', 'className', 'rarity',
   'growth', 'lv', 'hps', 'atks',
@@ -13,38 +15,28 @@ const FIELDS = [
   'art', 'voice', 'valId'
 ];
 const ENCODING = 'utf8';
-const args = process.argv.slice(2);
+const DELIM = '\\';
+const ARGS = process.argv.slice(2);
+const dsv = d3.dsvFormat(DELIM);
+let db = {};
 
-if (args.length != 2 || args[0] == args[1]) {
+if (ARGS.length != 2) {
   console.error('Arguments: src_file dst_file');
   process.exit(1);
 }
 
-fs.readFile(args[0], ENCODING, (err, data) => {
-  if (err) return console.error(err);
-  let lines = data.split('\n');
-  let db = {servants: []};
-
-  for (let line of lines) {
-    let fields = line.split('\\');
-    let servant = {};
-
-    for (let i = 0; i < FIELDS.length; i++) {
-      if (!fields[i]) servant[FIELDS[i]] = null;
-      else if (!FIELDS[i].endsWith('s')) servant[FIELDS[i]] = fields[i].trim();
-      else if (fields[i].includes(';')) servant[FIELDS[i]] = fields[i].trim().split(/ *; */);
-      else if (fields[i].includes(',')) servant[FIELDS[i]] = fields[i].trim().split(/ *, */);
-      else servant[FIELDS[i]] = fields[i].trim();
+db.servants = dsv.parse(
+  FIELDS.join(DELIM) + '\n' + fs.readFileSync(ARGS[0], {encoding: ENCODING}),
+  svt => {
+    for (let field of FIELDS) {
+      svt[field] = svt[field].trim();
+      if (field.endsWith('s')) {
+        if (svt[field].includes(';')) svt[field] = svt[field].split(/ *; */);
+        else svt[field] = svt[field].split(/ *, */);
+      }
     }
-
-    if (!servant.id) continue;
-    db.servants.push(servant);
+    return svt;
   }
+);
 
-  fs.writeFile(
-    args[1],
-    JSON.stringify(db, null, 2),
-    ENCODING,
-    err => err ? console.error(err) : null
-  );
-});
+fs.writeFileSync(ARGS[1], JSON.stringify(db, null, 2), {encoding: ENCODING});
