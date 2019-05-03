@@ -19017,6 +19017,27 @@ class Seraph {
       .filter({rarity})
       .value();
   }
+
+  findActiveById(id) {
+    return this.db
+      .get('actives')
+      .find({id})
+      .value();
+  }
+
+  findPassiveById(id) {
+    return this.db
+      .get('passives')
+      .find({id})
+      .value();
+  }
+
+  findNoblePhantasmById(id) {
+    return this.db
+      .get('nps')
+      .find({id})
+      .value();
+  }
 }
 
 module.exports = Seraph;

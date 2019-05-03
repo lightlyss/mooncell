@@ -33,8 +33,8 @@ npm test
 ```
 
 ## Patches
-To update the database, make the necessary changes to `docs/json/akasha.db` and
-add the new splash art into `docs/img/servants/`.
+To update the database, make the necessary changes to `docs/json/*.db` and
+add any new splash art into `docs/img/servants/`.
 ```bash
 npm run reset-db
 npm test
