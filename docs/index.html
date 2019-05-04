@@ -53,7 +53,12 @@
                 <ul class="list-unstyled">
                   <li>LV{{svt.lv}} {{svt.rarity}}★ {{svt.className}}</li>
                   <li>ATK: {{svt.atks[1]}} | HP: {{svt.hps[1]}}</li>
-                  <li>{{svt.deck}} | {{svt.np}}</li>
+                  <li>
+                    <a tabindex="0" mc-skill data-toggle="popover" data-placement="bottom" data-trigger="focus"
+                    data-html="true" data-content="<b>{{svt.np}}</b><br><small>{{np.alias}}</small><br>{{np.summary}}">
+                      {{svt.deck}}
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -68,8 +73,11 @@
               <hr class="my-4">
               <div class="small text-black-50">
                 <ul class="list-unstyled">
-                  <li ng-repeat="skill in svt.passives">
-                    {{skill}}
+                  <li ng-repeat="skill in passives">
+                    <a tabindex="0" mc-skill data-toggle="popover" data-placement="bottom" data-trigger="focus"
+                    data-html="true" data-content="<b>{{skill.id}}</b><br>{{skill.summary}}">
+                      {{skill.id}}
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -85,8 +93,11 @@
               <hr class="my-4">
               <div class="small text-black-50">
                 <ul class="list-unstyled">
-                  <li ng-repeat="skill in svt.actives">
-                    {{skill}}
+                  <li ng-repeat="skill in actives">
+                    <a tabindex="0" mc-skill data-toggle="popover" data-placement="bottom" data-trigger="focus"
+                    data-html="true" data-content="<b>{{skill.id}}</b><br>{{skill.summary}}">
+                      {{skill.id}}
+                    </a>
                   </li>
                 </ul>
               </div>
