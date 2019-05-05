@@ -19004,6 +19004,10 @@ class Seraph {
     return this.findById(ids[0]);
   }
 
+  search(query) {
+    return this.query(query.trim().split(/ +/));
+  }
+
   findById(id) {
     return this.db
       .get('servants')
@@ -19025,11 +19029,34 @@ class Seraph {
       .value();
   }
 
+  findActivesBySvtId(id) {
+    const actives = [];
+    for (const aId of this.findById(id).actives) {
+      const active = this.findActiveById(aId);
+      if (!active && aId.includes(',')) {
+        actives.push(
+          ...aId.split(/ *, */).map(this.findActiveById.bind(this))
+        );
+        continue;
+      }
+
+      actives.push(active);
+    }
+
+    return actives.filter(a => a);
+  }
+
   findPassiveById(id) {
     return this.db
       .get('passives')
       .find({id})
       .value();
+  }
+
+  findPassivesBySvtId(id) {
+    return this.findById(id).passives
+      .map(this.findPassiveById.bind(this))
+      .filter(p => p);
   }
 
   findNoblePhantasmById(id) {
