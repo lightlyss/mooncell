@@ -9,18 +9,13 @@ const sheba = new Sheba('docs/img/');
 
 module.exports.summon = fate.summon.bind(fate);
 
-module.exports.search = q => seraph.query(q.trim().split(/ +/));
+module.exports.search = seraph.search.bind(seraph);
 
 module.exports.getDetails = id => {
   const details = JSON.parse(JSON.stringify(seraph.findById(id)));
-  details.actives = details.actives
-    .map(seraph.findActiveById.bind(seraph))
-    .filter(a => a);
-  details.passives = details.passives
-    .map(seraph.findPassiveById.bind(seraph))
-    .filter(p => p);
-  details.np = seraph.findNoblePhantasmById(details.id);
-  details.splashes = ['1', '2', '3', '4']
-    .map(ver => sheba.getImgPath(details.id, ver));
+  details.actives = seraph.findActivesBySvtId(id);
+  details.passives = seraph.findPassivesBySvtId(id);
+  details.np = seraph.findNoblePhantasmById(id);
+  details.splashes = ['1', '2', '3', '4'].map(v => sheba.getImgPath(id, v));
   return details;
 };

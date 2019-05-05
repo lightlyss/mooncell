@@ -36,19 +36,15 @@ app.controller('mooncellCtrl', async ($scope, $window, automaton) => {
 
   $scope.search = query => {
     if (!query) return;
-    const svt = seraph.query(query.trim().split(/ +/));
+    const svt = seraph.search(query);
     if (!svt || !svt.id) return;
     $scope.imgPath = sheba.getImgPath(svt.id);
     $scope.svt = svt;
 
-    $scope.actives = svt.actives
-      .map(seraph.findActiveById.bind(seraph))
-      .filter(a => a);
+    $scope.actives = seraph.findActivesBySvtId(svt.id);
     $scope.actives.forEach(appendSummaryHTML);
 
-    $scope.passives = svt.passives
-      .map(seraph.findPassiveById.bind(seraph))
-      .filter(p => p);
+    $scope.passives = seraph.findPassivesBySvtId(svt.id);
     $scope.passives.forEach(appendSummaryHTML);
 
     $scope.np = seraph.findNoblePhantasmById(svt.id);
