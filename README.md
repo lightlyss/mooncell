@@ -2,7 +2,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/lightlyss/mooncell/badge.svg?branch=master)](https://coveralls.io/github/lightlyss/mooncell?branch=master)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
 # Moon Cell
-![icon](docs/img/servants/servant_166.png)
+![banner](banner.png)
 > Also called the Holy Grail, Eye of God, and Divine Automatic Recording Device.
 > A massive collection of photonic crystals within the Moon that comprises a giant supercomputer.
 
