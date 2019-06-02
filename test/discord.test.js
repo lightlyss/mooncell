@@ -107,7 +107,9 @@ const qc = [
   {n: 'performs suffix queries', i: '<@0> hime', o: 'Osakabe-Hime', c: '#eecab5'},
   {n: 'performs modifier queries', i: '<@0> saber lily', o: 'Altria Pendragon (Lily)', c: '#e6e3d8'},
   {n: 'performs beast queries', i: '<@90> beast l', o: 'Beast III/L', c: '#151227'},
-  {n: 'performs autocorrect on modifier queries', i: '<@0> jalter lily', o: 'Jeanne d\'Arc Alter Santa Lily', c: '#eab6ba'}
+  {n: 'performs autocorrect on modifier queries', i: '<@0> jalter lily', o: 'Jeanne d\'Arc Alter Santa Lily', c: '#eab6ba'},
+  {n: 'defaults to lesser ID for same names', i: '<@50> solomon', o: 'Solomon', c: '#251326'},
+  {n: 'performs ID search', i: '<@50> solomon 152', o: 'Solomon', c: '#35313c'}
 ];
 for (const c of qc) {
   test(c.n, done => {
