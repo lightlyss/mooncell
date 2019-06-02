@@ -50,9 +50,9 @@ db.servants = dsv.parse(
       svt[field] = svt[field].trim();
       if (field.endsWith('s')) {
         if (svt[field].includes(';')) {
-          svt[field] = svt[field].split(/ *; */);
+          svt[field] = svt[field].split(/ *; */).filter(e => e && e !== '-');
         } else {
-          svt[field] = svt[field].split(/ *, */);
+          svt[field] = svt[field].split(/ *, */).filter(e => e && e !== '-');
         }
       }
     }
@@ -69,9 +69,13 @@ db.actives = dsv.parseRows(
     }
 
     const skill = {
-      id: row[0].trim() + ' ' + row[1].trim(),
+      id: row[0].trim(),
       effects: []
     };
+
+    if (row[1].trim() !== '-') {
+      skill.id += ' ' + row[1].trim();
+    }
 
     for (let i = 6; i < row.length; i++) {
       const details = row[i].trim().split(/ *;; */);
@@ -98,10 +102,16 @@ db.passives = dsv.parseRows(
       return null;
     }
 
-    return {
-      id: row[0].trim() + ' ' + row[1].trim(),
+    const skill = {
+      id: row[0].trim(),
       effects: row[3].trim().split(/ *, */)
     };
+
+    if (row[1].trim() !== '-') {
+      skill.id += ' ' + row[1].trim();
+    }
+
+    return skill;
   }
 );
 

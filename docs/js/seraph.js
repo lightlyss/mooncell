@@ -18974,7 +18974,7 @@ class Seraph {
   constructor(adapter) {
     this.db = low(adapter);
     this.engine = new Engine({
-      fields: ['name', 'className'],
+      fields: ['name', 'className', 'id'],
       processTerm: term => term.toLowerCase(),
       searchOptions: {
         prefix: true,
