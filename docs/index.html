@@ -7,8 +7,19 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <title>Moon Cell</title>
+
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/grayscale.min.css" rel="stylesheet">
+
+  <script src="js/vendor/jquery.min.js"></script>
+  <script src="js/vendor/bootstrap.bundle.min.js"></script>
+  <script src="js/vendor/angular.min.js"></script>
+  <script src="js/vendor/angular-resource.min.js"></script>
+  <script src="js/vendor/angular-route.min.js"></script>
+
+  <script src="js/seraph.js"></script>
+  <script src="js/sheba.js"></script>
+  <script src="js/mooncell.js"></script>
 </head>
 
 <body class="bg-black">
@@ -34,7 +45,7 @@
   </section>
 
   <section class="contact-section bg-black">
-    <div class="container ng-hide" ng-hide="!svt">
+    <div class="container ng-hide" ng-hide="!svt" ng-cloak>
       <h2 class="text-white mb-5 text-center">{{svt.name}}</h2>
       <div class="row justify-content-center mb-4 mb-lg-5">
         <div class="col-xl-8 col-lg-7 text-center">
@@ -111,14 +122,5 @@
       <div class="container">Moon Cell</div>
     </footer>
   </section>
-
-  <script src="js/seraph.js"></script>
-  <script src="js/sheba.js"></script>
-  <script src="js/vendor/jquery.min.js"></script>
-  <script src="js/vendor/bootstrap.bundle.min.js"></script>
-  <script src="js/vendor/angular.min.js"></script>
-  <script src="js/vendor/angular-resource.min.js"></script>
-  <script src="js/vendor/angular-route.min.js"></script>
-  <script src="js/mooncell.js"></script>
 </body>
 </html>
