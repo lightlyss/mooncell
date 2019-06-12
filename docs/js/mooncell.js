@@ -15,6 +15,13 @@ app.service('automaton', class {
       .get('json/akasha.json')
       .then(res => new this.Adapter(res.data));
   }
+
+  async validatePath(path) {
+    return this.http
+      .get(path)
+      .then(() => true)
+      .catch(() => false);
+  }
 });
 
 app.directive('mcSkill', $timeout => {
@@ -38,7 +45,15 @@ app.controller('mooncellCtrl', async ($scope, $window, automaton) => {
     if (!query) return;
     const svt = seraph.search(query);
     if (!svt || !svt.id) return;
-    $scope.imgPath = sheba.getImgPath(svt.id);
+
+    $scope.imgPaths = [null, null, null, null, null, null, null, null, null];
+    for (let asc = 0; asc < $scope.imgPaths.length; asc++) {
+      let path = sheba.getImgPath(svt.id, asc.toString());
+      automaton.validatePath(path)
+        .then(valid => !valid ? null : ($scope.imgPaths[asc] = path))
+        .then(() => $scope.$apply());
+    }
+
     $scope.svt = svt;
 
     $scope.actives = seraph.findActivesBySvtId(svt.id);
