@@ -73,7 +73,7 @@ test('maintains servant-skill integrity', () => {
     try {
       expect(details.actives.length).toBeGreaterThanOrEqual(svt.actives.length);
       expect(details.passives.length).toBe(svt.passives.length);
-      expect(details.splashes.length).toBe(4);
+      expect(details.splashes.length).toBeGreaterThanOrEqual(4);
       if (details.np) {
         expect(details.np.effects.length).toBeGreaterThanOrEqual(1);
       }
