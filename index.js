@@ -1,3 +1,4 @@
+const fs = require('fs');
 const FileSync = require('lowdb/adapters/FileSync');
 const Seraph = require('./services/seraph.js');
 const Fate = require('./services/fate.js');
@@ -21,6 +22,15 @@ module.exports.getDetails = id => {
   details.actives = seraph.findActivesBySvtId(id);
   details.passives = seraph.findPassivesBySvtId(id);
   details.np = seraph.findNoblePhantasmById(id);
-  details.splashes = ['1', '2', '3', '4'].map(v => sheba.getImgPath(id, v));
+
+  details.splashes = [];
+  try {
+    for (let asc = 1; asc <= Number.MAX_SAFE_INTEGER; asc++) {
+      const path = sheba.getImgPath(id, asc.toString());
+      fs.statSync(path).isFile();
+      details.splashes.push(path);
+    }
+  } catch (error) {}
+
   return details;
 };

@@ -18,7 +18,7 @@ app.service('automaton', class {
 
   async validatePath(path) {
     return this.http
-      .get(path)
+      .head(path)
       .then(() => true)
       .catch(() => false);
   }
@@ -46,12 +46,14 @@ app.controller('mooncellCtrl', async ($scope, $window, automaton) => {
     const svt = seraph.search(query);
     if (!svt || !svt.id) return;
 
-    $scope.imgPaths = [null, null, null, null, null, null, null, null, null];
-    for (let asc = 0; asc < $scope.imgPaths.length; asc++) {
-      let path = sheba.getImgPath(svt.id, asc.toString());
+    $scope.imgPaths = ['1', '2', '3', '4'].map(asc => sheba.getImgPath(svt.id, asc));
+    $scope.imgPaths = $scope.imgPaths.concat(Array(5).fill(null));
+    for (let i = 4; i < $scope.imgPaths.length; i++) {
+      let path = sheba.getImgPath(svt.id, (i + 1).toString());
       automaton.validatePath(path)
-        .then(valid => !valid ? null : ($scope.imgPaths[asc] = path))
-        .then(() => $scope.$apply());
+        .then(valid => {
+          if (valid) $scope.$apply(() => { $scope.imgPaths[i] = path; });
+        });
     }
 
     $scope.svt = svt;
