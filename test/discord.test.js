@@ -122,6 +122,7 @@ for (const c of qc) {
         expect(fs.statSync(o.embed.data.file).isFile()).toBe(true);
         expect(o.embed.data.author).toBe(c.o);
         expect(o.embed.data.color).toBe(c.c);
+        expect(o.embed.data.Skills).toBeTruthy();
         done();
       }
     };

@@ -1,6 +1,6 @@
 {
   "name": "mooncell",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A basic lookup system for servants of Fate/Grand Order",
   "main": "index.js",
   "engines": {
