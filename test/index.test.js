@@ -1,5 +1,7 @@
 const mooncell = require('..');
 
+const LATEST_ID = 267;
+
 test('rolls the gacha', () => {
   const svt = mooncell.summon();
   const details = mooncell.getDetails(svt.id);
@@ -66,9 +68,9 @@ test('handles invalid IDs', () => {
 });
 
 test('maintains servant-skill integrity', () => {
-  let id = 1;
-  let details = null;
-  while ((details = mooncell.getDetails((++id).toString()))) {
+  for (let id = 2; id <= LATEST_ID; id++) {
+    const details = mooncell.getDetails(id.toString());
+    expect(details).toBeTruthy();
     const svt = mooncell.search(details.name + ' ' + id.toString());
     try {
       expect(details.actives.length).toBeGreaterThanOrEqual(svt.actives.length);
