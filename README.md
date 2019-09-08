@@ -14,6 +14,7 @@ Discord bot and web interface.
 Queries are accepted via any message that mentions the bot user.
 Empty queries will be treated as random single summon requests, mostly following
 the standard rates of Saint Quartz banners.
+
 ![demo](demo.png)
 
 ## Bot Setup
